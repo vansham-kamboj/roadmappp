@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-12 md:py-20">
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-foreground">
             Chart Your Course in Tech
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">

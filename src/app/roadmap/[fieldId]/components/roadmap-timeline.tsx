@@ -14,15 +14,15 @@ interface RoadmapTimelineProps {
 export default function RoadmapTimeline({ roadmap, onStepSelect, selectedStep }: RoadmapTimelineProps) {
   return (
     <div className="relative">
-      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border rounded-full transform -translate-x-1/2" aria-hidden="true"></div>
+      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border rounded-full -translate-x-1/2" aria-hidden="true"></div>
       <ul className="space-y-8">
         {roadmap.map((step, index) => {
           const isSelected = selectedStep?.title === step.title;
           const isEven = index % 2 === 0;
 
           return (
-            <li key={step.title} className="flex items-center w-full timeline-item" style={{ animationDelay: `${index * 100}ms` }}>
-              <div className={cn('w-1/2', isEven ? 'pr-8' : 'pl-8 ml-auto')}>
+            <li key={step.title} className={cn("flex w-full items-center timeline-item", isEven ? "justify-start" : "justify-end")} style={{ animationDelay: `${index * 100}ms` }}>
+              <div className={cn("w-1/2", isEven ? "pr-8" : "pl-8")}>
                 <Button
                   variant={isSelected ? "default" : "outline"}
                   className={cn(
