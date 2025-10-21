@@ -227,5 +227,179 @@
       "Google Cloud security foundations",
       "AWS Certified Security - Specialty"
     ]
+  },
+  "data-science/Learn Python & SQL": {
+    "roadmapDetails": "Python is the lingua franca of data science, used for everything from data cleaning to model building. SQL is essential for extracting data from relational databases. Master Python's data-focused libraries like Pandas and NumPy. For SQL, practice writing queries to filter, join, and aggregate data.",
+    "resources": [
+      "Codecademy: Learn Python 3",
+      "Kaggle: Intro to SQL",
+      "Book: Python for Data Analysis by Wes McKinney",
+      "SQLZoo - Interactive SQL Tutorial"
+    ]
+  },
+  "data-science/Statistics & Probability": {
+    "roadmapDetails": "Data science is built on a foundation of statistics and probability. You need to understand concepts like descriptive statistics, probability distributions, hypothesis testing, and regression. These concepts allow you to make inferences and predictions from data.",
+    "resources": [
+      "Khan Academy: Statistics and probability",
+      "StatQuest with Josh Starmer (YouTube)",
+      "Book: Practical Statistics for Data Scientists by Peter Bruce & Andrew Bruce"
+    ]
+  },
+  "data-science/Data Wrangling & Visualization": {
+    "roadmapDetails": "Raw data is often messy. Data wrangling (or cleaning) is the process of transforming and mapping data from one raw data form into another format with the intent of making it more appropriate and valuable for a variety of downstream purposes. Then, use libraries like Matplotlib and Seaborn to create visualizations that tell a story and reveal insights.",
+    "resources": [
+      "Pandas Official Documentation",
+      "Matplotlib Official Gallery",
+      "Seaborn Official Tutorials",
+      "Kaggle: Data Cleaning"
+    ]
+  },
+  "data-science/Machine Learning Basics": {
+    "roadmapDetails": "Start with the fundamentals of machine learning. Learn the difference between supervised learning (e.g., regression, classification) and unsupervised learning (e.g., clustering). Implement basic algorithms like Linear Regression, Logistic Regression, and K-Means Clustering using Scikit-learn.",
+    "resources": [
+      "Google's Machine Learning Crash Course",
+      "Coursera: Machine Learning by Andrew Ng",
+      "Scikit-learn Official Tutorials",
+      "Book: Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow"
+    ]
+  },
+  "data-science/Build a Portfolio": {
+    "roadmapDetails": "Apply your skills to real-world datasets. Find interesting datasets on platforms like Kaggle, UCI Machine Learning Repository, or data.gov. Work through the entire data science pipeline: data cleaning, exploration, modeling, and communication of results. Document your projects in a portfolio to showcase your abilities to potential employers.",
+    "resources": [
+      "Kaggle Datasets",
+      "538 Data",
+      "How to Build a Data Science Portfolio by Dataquest",
+      "GitHub for hosting your project code and notebooks"
+    ]
+  },
+  "machine-learning/Master Python & Libraries": {
+    "roadmapDetails": "Deepen your Python skills and master the essential libraries for machine learning. NumPy for numerical operations, Pandas for data manipulation, and Scikit-learn for traditional ML algorithms are non-negotiable. Proficiency with these tools is essential for efficient data handling and modeling.",
+    "resources": [
+      "NumPy: The absolute basics for beginners",
+      "10 minutes to pandas",
+      "Scikit-learn User Guide",
+      "Book: Python for Data Analysis by Wes McKinney"
+    ]
+  },
+  "machine-learning/Advanced Math Concepts": {
+    "roadmapDetails": "To truly understand how ML algorithms work, you need to grasp the underlying math. Focus on Linear Algebra (vectors, matrices, eigenvalues), Calculus (derivatives, gradients), and Optimization (gradient descent). This knowledge is crucial for understanding and implementing deep learning models.",
+    "resources": [
+      "3Blue1Brown: Essence of linear algebra (YouTube)",
+      "Khan Academy: Multivariable calculus",
+      "An overview of gradient descent optimization algorithms"
+    ]
+  },
+  "machine-learning/Deep Learning": {
+    "roadmapDetails": "Dive into the world of neural networks. Learn about the architecture of deep neural networks, activation functions, backpropagation, and different types of layers (dense, convolutional, recurrent). Use a modern framework like TensorFlow or PyTorch to build and train your own models for tasks like image classification or text generation.",
+    "resources": [
+      "DeepLearning.AI - Specializations on Coursera",
+      "fast.ai - Practical Deep Learning for Coders",
+      "PyTorch Official Tutorials",
+      "TensorFlow Core Tutorials"
+    ]
+  },
+  "machine-learning/Model Deployment": {
+    "roadmapDetails": "A model is only useful if it can be used in an application. Learn how to take a trained model and deploy it as an API. This involves using tools like Flask or FastAPI to create a web server, containerizing your application with Docker, and potentially deploying it to a cloud service like AWS SageMaker or Google AI Platform.",
+    "resources": [
+      "Deploying Machine Learning Models (paperspace.com blog)",
+      "Flask Official Documentation",
+      "FastAPI Official Documentation",
+      "Docker Get Started"
+    ]
+  },
+  "machine-learning/Specializations": {
+    "roadmapDetails": "Once you have the fundamentals, you can specialize. Natural Language Processing (NLP) deals with text and speech. Computer Vision (CV) deals with images and video. Reinforcement Learning (RL) is about training agents to make decisions. Pick an area that interests you and go deep.",
+    "resources": [
+      "Stanford CS224n: NLP with Deep Learning",
+      "Stanford CS231n: Convolutional Neural Networks for Visual Recognition",
+      "DeepMind: Introduction to Reinforcement Learning"
+    ]
+  },
+  "game-development/Choose an Engine": {
+    "roadmapDetails": "A game engine provides the core functionality you need to make a game. Unity (using C#) is very popular, especially for indie and mobile games, and has a vast amount of learning resources. Unreal Engine (using C++ and Blueprints) is known for high-end graphics. Godot is a rising open-source alternative. Pick one and stick with it for your first few projects.",
+    "resources": [
+      "Unity Learn",
+      "Unreal Engine Online Learning",
+      "Godot Docs",
+      "Which Game Engine is Right for You? (YouTube)"
+    ]
+  },
+  "game-development/Programming Fundamentals": {
+    "roadmapDetails": "No matter the engine, you need strong programming skills. If you chose Unity, learn C#. If you chose Unreal, learn C++. Focus on core concepts like variables, loops, functions, and object-oriented programming. Game development will push your programming skills with concepts like game loops, state management, and performance optimization.",
+    "resources": [
+      "Microsoft C# Docs",
+      "learncpp.com",
+      "Book: The C# Player's Guide",
+      "Game Programming Patterns by Robert Nystrom"
+    ]
+  },
+  "game-development/Game Design Principles": {
+    "roadmapDetails": "Programming skills build the game, but design skills make it fun. Learn about core game loops, player motivation, level design, and difficulty curves. Understand how to give clear player feedback. Start by analyzing your favorite games to see how they apply these principles.",
+    "resources": [
+      "Game Maker's Toolkit (YouTube channel)",
+      "GDC (Game Developers Conference) Vault (YouTube)",
+      "Book: The Art of Game Design: A Book of Lenses by Jesse Schell"
+    ]
+  },
+  "game-development/3D/2D Art Pipeline": {
+    "roadmapDetails": "Even if you're not an artist, you need to understand how art assets are made and used. For 2D, learn about spritesheets and tilemaps. For 3D, learn about modeling, texturing, and animation. Blender is a powerful, free tool for 3D art. Understanding the pipeline will help you work better with artists or use pre-made assets more effectively.",
+    "resources": [
+      "Blender Guru Donut Tutorial (YouTube)",
+      "Pixel Art 101 by Saint11",
+      "Kenney.nl for free game assets",
+      "The Total Beginner’s Guide to Game Art"
+    ]
+  },
+  "game-development/Ship a Small Game": {
+    "roadmapDetails": "The most important step is to finish a project. Start very small. Recreate a classic like Pong or Pac-Man. The process of taking a game from idea to a finished, playable state (even if simple) is the best way to learn. Publish it on a platform like itch.io to get feedback and build your confidence.",
+    "resources": [
+      "itch.io - Indie game marketplace",
+      "How to Scope a Game Project (GDC Talk)",
+      "Your First Game Jam (Extra Credits YouTube)"
+    ]
+  },
+  "mobile-development/Choose a Platform": {
+    "roadmapDetails": "Decide if you want to build for a specific platform or for both. For native iOS, you'll use Swift and Xcode. For native Android, you'll use Kotlin and Android Studio. For cross-platform, React Native (JavaScript/React) and Flutter (Dart) are the top choices. Cross-platform is often faster, but native can provide better performance and platform integration.",
+    "resources": [
+      "Apple Developer - Swift",
+      "Android Developer - Kotlin",
+      "React Native Official Docs",
+      "Flutter Official Docs"
+    ]
+  },
+  "mobile-development/UI/UX for Mobile": {
+    "roadmapDetails": "Designing for mobile is different from the web. You have a smaller screen, and touch is the primary input. Learn Apple's Human Interface Guidelines (for iOS) and Google's Material Design (for Android). Understand mobile navigation patterns like tab bars and navigation drawers. Your design must be intuitive and easy to use with one hand.",
+    "resources": [
+      "Apple's Human Interface Guidelines",
+      "Google's Material Design",
+      "pttrns.com - Mobile design patterns",
+      "Mobbin - A library of mobile app screenshots"
+    ]
+  },
+  "mobile-development/Networking & Data": {
+    "roadmapDetails": "Most apps need to get data from the internet. Learn how to make network requests to REST APIs to fetch data. Then, learn how to store that data on the device so the app works offline. Options include local databases like SQLite or Realm, or simple key-value storage.",
+    "resources": [
+      "Using REST APIs in your Mobile App",
+      "Android Room for local database",
+      "iOS Core Data",
+      "Firebase for backend and data storage"
+    ]
+  },
+  "mobile-development/Platform-specific APIs": {
+    "roadmapDetails": "Mobile apps can do more than websites. Learn how to access device hardware and platform services. This includes using the camera, getting the user's GPS location, sending push notifications, and integrating with health data or payment systems. This is where native or cross-platform apps truly shine.",
+    "resources": [
+      "iOS AVFoundation for Camera/Audio",
+      "Android CameraX",
+      "Firebase Cloud Messaging for push notifications",
+      "Integrating with HealthKit on iOS"
+    ]
+  },
+  "mobile-development/Publish to App Store": {
+    "roadmapDetails": "Getting your app into the hands of users is the final step. Learn the process for each store. For Apple's App Store, you'll need a paid developer account and to go through a review process. For Google's Play Store, the process is generally faster. Prepare your store listing with screenshots, descriptions, and privacy policies.",
+    "resources": [
+      "Apple App Store Review Guidelines",
+      "Google Play Console Help",
+      "Fastlane - Automate screenshots and deployments"
+    ]
   }
 }

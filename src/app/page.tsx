@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { ROADMAP_DATA } from '@/lib/roadmap-data';
@@ -11,11 +11,19 @@ import { Search } from 'lucide-react';
 import { Pill } from '@/components/ui/pill';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { useIsMobile } from '@/hooks/use-mobile';
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useIsMobile();
+
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+  const plugin2 = useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: true })
+  );
 
   useEffect(() => {
     setIsMounted(true);
@@ -27,6 +35,10 @@ export default function Home() {
     return field.name.toLowerCase().includes(query) ||
            field.description.toLowerCase().includes(query)
   });
+
+  const midIndex = Math.ceil(filteredFields.length / 2);
+  const rowOneFields = filteredFields.slice(0, midIndex);
+  const rowTwoFields = filteredFields.slice(midIndex);
 
   const renderContent = () => {
     if (!isMounted) {
@@ -57,10 +69,41 @@ export default function Home() {
     }
     
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredFields.map((field) => (
-          <FieldCard key={field.id} field={field} />
-        ))}
+      <div className="space-y-8">
+        <Carousel 
+          opts={{ align: "start", loop: true }} 
+          plugins={[plugin.current]}
+          onMouseEnter={() => plugin.current.stop()}
+          onMouseLeave={() => plugin.current.reset()}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {rowOneFields.map((field) => (
+              <CarouselItem key={field.id} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="h-full">
+                  <FieldCard field={field} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <Carousel 
+          opts={{ align: "start", loop: true }}
+          plugins={[plugin2.current]}
+          onMouseEnter={() => plugin2.current.stop()}
+          onMouseLeave={() => plugin2.current.reset()}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {rowTwoFields.map((field) => (
+              <CarouselItem key={field.id} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="h-full">
+                  <FieldCard field={field} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     );
   };

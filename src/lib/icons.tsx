@@ -1,6 +1,6 @@
-import { Code, Server, Bot, PenTool, LayoutTemplate, Cloud, type LucideIcon, type LucideProps } from 'lucide-react';
+import { Code, Server, Bot, PenTool, LayoutTemplate, Cloud, BrainCircuit, Database, Gamepad2, Smartphone, type LucideIcon, type LucideProps } from 'lucide-react';
 
-export type IconName = 'code' | 'server' | 'devops' | 'design' | 'default';
+export type IconName = 'code' | 'server' | 'devops' | 'design' | 'default' | 'ml' | 'data' | 'game' | 'mobile';
 
 export const FieldIcons: Record<IconName, LucideIcon> = {
   code: Code,
@@ -8,6 +8,10 @@ export const FieldIcons: Record<IconName, LucideIcon> = {
   devops: Bot,
   design: PenTool,
   default: Cloud,
+  ml: BrainCircuit,
+  data: Database,
+  game: Gamepad2,
+  mobile: Smartphone,
 };
 
 interface FieldIconProps extends LucideProps {
