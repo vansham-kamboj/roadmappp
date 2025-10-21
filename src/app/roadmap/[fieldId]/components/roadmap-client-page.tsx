@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import type { Field, RoadmapStep } from '@/lib/roadmap-data';
 import type { AggregateResourcesOutput } from '@/ai/flows/ai-resource-aggregation';
 import { FieldIcon } from '@/lib/icons';
@@ -16,8 +16,12 @@ import {
   SidebarTrigger,
   SidebarContent,
   SidebarInset,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button';
+import { PanelLeftOpen } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface RoadmapClientPageProps {
   field: Field;
@@ -30,18 +34,23 @@ const isDetailsKey = (key: string): key is DetailsKey => {
   return key in detailsData;
 };
 
-export default function RoadmapClientPage({ field, relatedFields }: RoadmapClientPageProps) {
+function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
   const [selectedStep, setSelectedStep] = useState<RoadmapStep | null>(field.roadmap[0]);
   const [details, setDetails] = useState<AggregateResourcesOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { theme } = useTheme();
+  const { setOpenMobile } = useSidebar();
+  const isMobile = useIsMobile();
   
   const handleStepSelect = useCallback((step: RoadmapStep) => {
     setSelectedStep(step);
     setIsLoading(true);
     setDetails(null);
     setError(null);
+    if (isMobile) {
+      setOpenMobile(false);
+    }
 
     // Simulate a network request
     setTimeout(() => {
@@ -59,15 +68,15 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
         setIsLoading(false);
       }
     }, 300);
-  }, [field.id]);
+  }, [field.id, isMobile, setOpenMobile]);
   
-  // Pre-load the first step details
-  useState(() => {
+  // Pre-load the first step details on initial render
+  useEffect(() => {
     if (field.roadmap.length > 0) {
       handleStepSelect(field.roadmap[0]);
     }
-  });
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const headerContent = (
     <div className="mb-8 text-center">
@@ -88,37 +97,37 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   );
 
   return (
-    <SidebarProvider>
+    <>
       <Sidebar>
-        <SidebarContent>
+        <SidebarContent className="bg-background/80 backdrop-blur-sm">
           <div className="p-4">
-            <h2 className="text-lg font-semibold">helllo welcome to techez</h2>
+            <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center">Roadmap Steps</h2>
+            <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
           </div>
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
-        <div className="container mx-auto py-12">
-          {headerContent}
+        <div className="container mx-auto py-12 px-4 md:px-6">
           <div className="md:hidden mb-4 flex items-center gap-2">
-            <SidebarTrigger />
-            <span>Roadmap Steps</span>
+            <SidebarTrigger asChild>
+              <Button variant="outline"><PanelLeftOpen /> Roadmap Steps</Button>
+            </SidebarTrigger>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
-            <div className="hidden lg:block lg:px-4">
-              <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Roadmap Steps</h2>
-              <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
-            </div>
-            <div className="lg:hidden">
-              <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
-            </div>
-            <div className="mt-12 lg:mt-0 lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
-              <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Step Details</h2>
-              <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
-            </div>
+          {headerContent}
+          <div className="mt-12">
+            <h2 className="text-3xl font-bold font-headline text-foreground mb-6 text-center">Step Details</h2>
+            <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
           </div>
         </div>
       </SidebarInset>
-    </SidebarProvider>
+    </>
   );
 }
 
+export default function RoadmapClientPage(props: RoadmapClientPageProps) {
+  return (
+    <SidebarProvider>
+      <RoadmapContent {...props} />
+    </SidebarProvider>
+  )
+}
