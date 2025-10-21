@@ -81,7 +81,7 @@ function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
   const headerContent = (
     <div className="mb-8 text-center">
       <FieldIcon name={field.icon} className="mx-auto w-16 h-16 text-primary mb-4" />
-      <h1 className={`text-4xl md:text-5xl font-bold font-headline text-foreground lg:text-primary`}>{field.name} Roadmap</h1>
+      <h1 className={`text-4xl md:text-5xl font-bold font-headline ${theme === 'light' ? 'text-primary' : 'text-foreground'}`}>{field.name} Roadmap</h1>
       <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">{field.details}</p>
       {relatedFields.length > 0 && (
         <div className="mt-6 flex justify-center gap-2 flex-wrap">
@@ -110,7 +110,7 @@ function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
         <div className="container mx-auto py-12 px-4 md:px-6">
           <div className="md:hidden mb-4 flex items-center gap-2">
             <SidebarTrigger asChild>
-              <Button variant="outline"><PanelLeftOpen /> Roadmap Steps</Button>
+                <Button variant="outline"><PanelLeftOpen /> Roadmap Steps</Button>
             </SidebarTrigger>
           </div>
           {headerContent}
