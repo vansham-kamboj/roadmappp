@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { ROADMAP_DATA } from '@/lib/roadmap-data';
@@ -11,23 +11,13 @@ import { Search } from 'lucide-react';
 import { Pill } from '@/components/ui/pill';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { useIsMobile } from '@/hooks/use-mobile';
-import Autoplay from "embla-carousel-autoplay";
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useIsMobile();
   const { theme } = useTheme();
-
-  const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, playOnInit: true })
-  );
-  const plugin2 = useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: false, playOnInit: true })
-  );
 
   useEffect(() => {
     setIsMounted(true);
@@ -74,40 +64,24 @@ export default function Home() {
     
     return (
       <div className="space-y-8">
-        <Carousel 
-          opts={{ align: "start", loop: true }} 
-          plugins={[plugin.current]}
-          onMouseEnter={() => plugin.current.stop()}
-          onMouseLeave={() => plugin.current.reset()}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-4">
-            {rowOneFields.map((field) => (
-              <CarouselItem key={field.id} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                <div className="h-full">
-                  <FieldCard field={field} />
-                </div>
-              </CarouselItem>
+        <div className="w-full overflow-hidden">
+          <div className="flex w-max hover:[animation-play-state:paused] marquee">
+            {[...rowOneFields, ...rowOneFields].map((field, index) => (
+              <div key={`${field.id}-${index}`} className="px-4 w-[33.33vw] flex-shrink-0">
+                <FieldCard field={field} />
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
-        <Carousel 
-          opts={{ align: "start", loop: true }}
-          plugins={[plugin2.current]}
-          onMouseEnter={() => plugin2.current.stop()}
-          onMouseLeave={() => plugin2.current.reset()}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-4">
-            {rowTwoFields.map((field) => (
-              <CarouselItem key={field.id} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                <div className="h-full">
-                  <FieldCard field={field} />
-                </div>
-              </CarouselItem>
+          </div>
+        </div>
+        <div className="w-full overflow-hidden">
+          <div className="flex w-max hover:[animation-play-state:paused] marquee-reverse">
+            {[...rowTwoFields, ...rowTwoFields].map((field, index) => (
+              <div key={`${field.id}-${index}`} className="px-4 w-[33.33vw] flex-shrink-0">
+                <FieldCard field={field} />
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+          </div>
+        </div>
       </div>
     );
   };
