@@ -14,8 +14,8 @@ interface RoadmapTimelineProps {
 
 export default function RoadmapTimeline({ roadmap, onStepSelect, selectedStep }: RoadmapTimelineProps) {
   return (
-    <div className="relative pl-8 pr-4 md:pl-8 md:pr-4">
-      <div className="absolute left-8 md:left-4 top-0 bottom-0 w-0.5 bg-border" aria-hidden="true"></div>
+    <div className="relative pl-4 pr-4">
+      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" aria-hidden="true"></div>
       <ul className="space-y-4">
         {roadmap.map((step, index) => {
           const isSelected = selectedStep?.title === step.title;
@@ -23,7 +23,7 @@ export default function RoadmapTimeline({ roadmap, onStepSelect, selectedStep }:
           return (
             <li key={step.title} className={cn("relative flex w-full items-center timeline-item")} style={{ animationDelay: `${index * 100}ms` }}>
                <div className={cn(
-                  "absolute left-8 md:left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-colors",
+                  "absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-colors",
                   isSelected ? "bg-primary" : "bg-border"
                 )}>
                   <div className={cn(
@@ -35,17 +35,17 @@ export default function RoadmapTimeline({ roadmap, onStepSelect, selectedStep }:
                 <Button
                   variant={isSelected ? "default" : "outline"}
                   className={cn(
-                    "w-full h-auto py-3 px-4 text-left shadow-md transition-all duration-300 transform",
+                    "w-full h-auto text-left shadow-md transition-all duration-300 transform",
                     "hover:-translate-y-1 hover:shadow-lg",
                      isSelected ? "bg-primary text-primary-foreground scale-105" : "bg-card"
                   )}
                   onClick={() => onStepSelect(step)}
                 >
-                  <div className="flex-grow">
-                    <h3 className="font-headline font-bold text-lg">{step.title}</h3>
-                    <p className="text-sm opacity-80">{step.description}</p>
+                  <div className="flex-grow flex flex-col items-start py-2 px-2">
+                    <h3 className="font-headline font-bold text-base md:text-lg whitespace-normal text-left">{step.title}</h3>
+                    <p className="text-xs md:text-sm opacity-80 whitespace-normal text-left">{step.description}</p>
                   </div>
-                  <CheckCircle2 className={cn("w-5 h-5 transition-colors ml-4", isSelected ? 'text-primary-foreground' : 'text-primary' )} />
+                  <CheckCircle2 className={cn("w-5 h-5 transition-colors ml-2 shrink-0", isSelected ? 'text-primary-foreground' : 'text-primary' )} />
                 </Button>
               </div>
             </li>
