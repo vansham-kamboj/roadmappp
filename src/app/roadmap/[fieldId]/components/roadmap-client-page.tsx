@@ -10,6 +10,14 @@ import StepDetails from './step-details';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import detailsData from '@/lib/roadmap-details.json';
+import {
+  SidebarProvider,
+  Sidebar,
+  SidebarTrigger,
+  SidebarContent,
+  SidebarInset,
+} from '@/components/ui/sidebar';
+import { useTheme } from 'next-themes';
 
 interface RoadmapClientPageProps {
   field: Field;
@@ -23,11 +31,12 @@ const isDetailsKey = (key: string): key is DetailsKey => {
 };
 
 export default function RoadmapClientPage({ field, relatedFields }: RoadmapClientPageProps) {
-  const [selectedStep, setSelectedStep] = useState<RoadmapStep | null>(null);
+  const [selectedStep, setSelectedStep] = useState<RoadmapStep | null>(field.roadmap[0]);
   const [details, setDetails] = useState<AggregateResourcesOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
+  const { theme } = useTheme();
+  
   const handleStepSelect = useCallback((step: RoadmapStep) => {
     setSelectedStep(step);
     setIsLoading(true);
@@ -51,11 +60,19 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
       }
     }, 300);
   }, [field.id]);
+  
+  // Pre-load the first step details
+  useState(() => {
+    if (field.roadmap.length > 0) {
+      handleStepSelect(field.roadmap[0]);
+    }
+  });
+
 
   const headerContent = (
     <div className="mb-8 text-center">
       <FieldIcon name={field.icon} className="mx-auto w-16 h-16 text-primary mb-4" />
-      <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground lg:text-primary">{field.name} Roadmap</h1>
+      <h1 className={`text-4xl md:text-5xl font-bold font-headline text-foreground lg:text-primary`}>{field.name} Roadmap</h1>
       <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">{field.details}</p>
       {relatedFields.length > 0 && (
         <div className="mt-6 flex justify-center gap-2 flex-wrap">
@@ -71,18 +88,37 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   );
 
   return (
-    <div className="container mx-auto py-12">
-      {headerContent}
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
-        <div className="lg:px-4">
-          <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Roadmap Steps</h2>
-          <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
+    <SidebarProvider>
+      <Sidebar>
+        <SidebarContent>
+          <div className="p-4">
+            <h2 className="text-lg font-semibold">helllo welcome to techez</h2>
+          </div>
+        </SidebarContent>
+      </Sidebar>
+      <SidebarInset>
+        <div className="container mx-auto py-12">
+          {headerContent}
+          <div className="md:hidden mb-4 flex items-center gap-2">
+            <SidebarTrigger />
+            <span>Roadmap Steps</span>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
+            <div className="hidden lg:block lg:px-4">
+              <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Roadmap Steps</h2>
+              <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
+            </div>
+            <div className="lg:hidden">
+              <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
+            </div>
+            <div className="mt-12 lg:mt-0 lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
+              <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Step Details</h2>
+              <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
+            </div>
+          </div>
         </div>
-        <div className="mt-12 lg:mt-0 lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
-           <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Step Details</h2>
-          <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
-        </div>
-      </div>
-    </div>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }
+
