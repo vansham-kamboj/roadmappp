@@ -15,13 +15,16 @@ export default function Header() {
         </Link>
         
         <div className="hidden md:flex flex-1 items-center justify-center gap-6">
-            <Link href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://the-vk.vercel.app/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
                 The Man Behind
+            </Link>
+            <Link href="https://lvl-up-kappa.vercel.app/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                LvLup Yourself
             </Link>
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Link href="#">
+                        <Link href="https://the-vk.vercel.app/">
                            <Button>Get Mentorship</Button>
                         </Link>
                     </TooltipTrigger>
