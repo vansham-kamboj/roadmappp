@@ -10,18 +10,7 @@ import StepDetails from './step-details';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import detailsData from '@/lib/roadmap-details.json';
-import {
-  SidebarProvider,
-  Sidebar,
-  SidebarTrigger,
-  SidebarContent,
-  SidebarInset,
-  useSidebar,
-} from '@/components/ui/sidebar';
 import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
-import { PanelLeftOpen } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 interface RoadmapClientPageProps {
   field: Field;
@@ -34,23 +23,18 @@ const isDetailsKey = (key: string): key is DetailsKey => {
   return key in detailsData;
 };
 
-function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
+export default function RoadmapClientPage({ field, relatedFields }: RoadmapClientPageProps) {
   const [selectedStep, setSelectedStep] = useState<RoadmapStep | null>(field.roadmap[0]);
   const [details, setDetails] = useState<AggregateResourcesOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { theme } = useTheme();
-  const { setOpenMobile } = useSidebar();
-  const isMobile = useIsMobile();
-  
+
   const handleStepSelect = useCallback((step: RoadmapStep) => {
     setSelectedStep(step);
     setIsLoading(true);
     setDetails(null);
     setError(null);
-    if (isMobile) {
-      setOpenMobile(false);
-    }
 
     // Simulate a network request
     setTimeout(() => {
@@ -68,7 +52,7 @@ function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
         setIsLoading(false);
       }
     }, 300);
-  }, [field.id, isMobile, setOpenMobile]);
+  }, [field.id]);
   
   // Pre-load the first step details on initial render
   useEffect(() => {
@@ -97,37 +81,18 @@ function RoadmapContent({ field, relatedFields }: RoadmapClientPageProps) {
   );
 
   return (
-    <>
-      <Sidebar>
-        <SidebarContent className="bg-background/80 backdrop-blur-sm">
-          <div className="p-4">
-            <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center">Roadmap Steps</h2>
-            <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
-          </div>
-        </SidebarContent>
-      </Sidebar>
-      <SidebarInset>
-        <div className="container mx-auto py-12 px-4 md:px-6">
-          <div className="md:hidden mb-4 flex items-center gap-2">
-            <SidebarTrigger asChild>
-                <Button variant="outline"><PanelLeftOpen /> Roadmap Steps</Button>
-            </SidebarTrigger>
-          </div>
-          {headerContent}
-          <div className="mt-12">
+    <div className="container mx-auto py-12 px-4 md:px-6">
+      {headerContent}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
+        <div className="md:col-span-4">
+           <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center">Roadmap Steps</h2>
+           <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
+        </div>
+        <div className="md:col-span-8">
             <h2 className="text-3xl font-bold font-headline text-foreground mb-6 text-center">Step Details</h2>
             <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
-          </div>
         </div>
-      </SidebarInset>
-    </>
+      </div>
+    </div>
   );
-}
-
-export default function RoadmapClientPage(props: RoadmapClientPageProps) {
-  return (
-    <SidebarProvider>
-      <RoadmapContent {...props} />
-    </SidebarProvider>
-  )
 }
