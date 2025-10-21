@@ -83,24 +83,26 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
       <SidebarProvider>
         <div className="container mx-auto py-8">
             {headerContent}
-            <div className="lg:hidden text-center mb-8">
+            <div className="text-center mb-8">
                 <SidebarTrigger asChild>
                     <Button variant="outline">
-                        <PanelLeftOpen className="mr-2"/>
+                        <PanelLeftOpen className="mr-2 h-4 w-4"/>
                         View Roadmap
                     </Button>
                 </SidebarTrigger>
             </div>
             <Sidebar side="left">
-                <SidebarContent>
-                    <SidebarHeader>
-                        <h2 className="text-2xl font-bold font-headline text-white p-4">Roadmap Steps</h2>
+                <SidebarContent className="bg-card">
+                    <SidebarHeader className="p-4 border-b">
+                        <h2 className="text-2xl font-bold font-headline text-foreground">Roadmap Steps</h2>
                     </SidebarHeader>
-                    {timeline}
+                    <div className="p-4">
+                        {timeline}
+                    </div>
                 </SidebarContent>
             </Sidebar>
 
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-8">
                 <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
             </div>
         </div>
