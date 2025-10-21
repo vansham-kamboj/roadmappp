@@ -9,15 +9,10 @@ import FieldCard from '@/components/field-card';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import { Pill } from '@/components/ui/pill';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useTheme } from 'next-themes';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
-  const isMobile = useIsMobile();
-  const { theme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
@@ -46,28 +41,12 @@ export default function Home() {
       );
     }
     
-    if (isMobile) {
-      return (
-        <Carousel opts={{ align: "start", loop: false }} className="w-full">
-          <CarouselContent className="-ml-4">
-            {filteredFields.map((field) => (
-              <CarouselItem key={field.id} className="pl-4 basis-4/5 md:basis-1/2">
-                <div className="h-full">
-                  <FieldCard field={field} />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      );
-    }
-    
     return (
       <div className="space-y-8">
         <div className="w-full overflow-hidden">
           <div className="flex w-max hover:[animation-play-state:paused] marquee">
             {[...rowOneFields, ...rowOneFields].map((field, index) => (
-              <div key={`${field.id}-${index}`} className="px-4 w-[33.33vw] flex-shrink-0">
+              <div key={`${field.id}-${index}`} className="px-4 w-[80vw] md:w-[33.33vw] flex-shrink-0">
                 <FieldCard field={field} />
               </div>
             ))}
@@ -76,7 +55,7 @@ export default function Home() {
         <div className="w-full overflow-hidden">
           <div className="flex w-max hover:[animation-play-state:paused] marquee-reverse">
             {[...rowTwoFields, ...rowTwoFields].map((field, index) => (
-              <div key={`${field.id}-${index}`} className="px-4 w-[33.33vw] flex-shrink-0">
+              <div key={`${field.id}-${index}`} className="px-4 w-[80vw] md:w-[33.33vw] flex-shrink-0">
                 <FieldCard field={field} />
               </div>
             ))}
