@@ -10,11 +10,11 @@ export default function Home() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-12 md:py-20">
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-white">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-foreground text-reveal">
             Your Learning & Mentoring Universe
           </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground">
-            Explore comprehensive, AI-powered roadmaps for the most in-demand fields in the IT industry. Each field is a galaxy, and each step a solar system on your journey to mastery.
+          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground text-reveal" style={{ animationDelay: '0.3s' }}>
+            Explore comprehensive roadmaps for the most in-demand fields in the IT industry. Each field is a galaxy, and each step a solar system on your journey to mastery.
           </p>
         </section>
 
