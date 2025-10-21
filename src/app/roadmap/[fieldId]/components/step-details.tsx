@@ -94,7 +94,7 @@ export default function StepDetails({ details, isLoading, error, selectedStep }:
                     rel="noopener noreferrer" 
                     className="flex items-center gap-3 p-3 rounded-md bg-secondary hover:bg-primary/20 transition-colors w-full group"
                   >
-                     <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                     <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                     <span className="truncate text-sm font-medium">{resource}</span>
                   </a>
                 </li>

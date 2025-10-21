@@ -13,10 +13,12 @@ import { Pill } from '@/components/ui/pill';
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredFields = ROADMAP_DATA.filter(field =>
-    field.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    field.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredFields = ROADMAP_DATA.filter(field => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return true;
+    return field.name.toLowerCase().includes(query) ||
+           field.description.toLowerCase().includes(query)
+  });
 
   return (
     <div className="flex flex-col min-h-screen bg-background">

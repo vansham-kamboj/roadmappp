@@ -11,6 +11,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import detailsData from '@/lib/roadmap-details.json';
 import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 interface RoadmapClientPageProps {
   field: Field;
@@ -63,7 +65,13 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   }, []);
 
   const headerContent = (
-    <div className="mb-8 text-center">
+    <div className="mb-8 text-center relative">
+        <Link href="/" className="absolute top-0 left-0">
+            <Button variant="outline">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back
+            </Button>
+        </Link>
       <FieldIcon name={field.icon} className="mx-auto w-16 h-16 text-primary mb-4" />
       <h1 className={`text-4xl md:text-5xl font-bold font-headline ${theme === 'light' ? 'text-primary' : 'text-foreground'}`}>{field.name} Roadmap</h1>
       <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">{field.details}</p>
