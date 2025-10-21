@@ -131,7 +131,6 @@
         "resources": [
             "Vercel Documentation",
             "Netlify Documentation",
-
             "Introduction to CI/CD with GitHub Actions",
             "Docker for Beginners"
         ]
@@ -195,7 +194,6 @@
         "resources": [
             "Microsoft C# Docs",
             "learncpp.com",
-
             "Book: The C# Player's Guide",
             "Game Programming Patterns by Robert Nystrom"
         ]
@@ -235,7 +233,6 @@
             "MDN Web Docs: An overview of HTTP",
             "Book: RESTful Web APIs by Leonard Richardson"
         ]
-
     },
     "api-development-integration/Learn API authentication": {
         "roadmapDetails": "Secure your APIs by learning different authentication and authorization methods. Understand basic authentication, API keys, and more advanced protocols like OAuth 2.0 and OpenID Connect. Learn how to use JSON Web Tokens (JWT) for stateless authentication.",
@@ -431,7 +428,6 @@
         "resources": [
             "Fundamentals of Data Engineering (book)",
             "Apache Airflow Documentation",
-
             "dbt (data build tool) for transformations",
             "Building your first ETL pipeline (tutorial)"
         ]
@@ -846,7 +842,6 @@
         "resources": [
             "Balsamiq Wireframes",
             "UXPin - The Guide to Wireframing",
-
             "InVision - Prototyping Tool",
             "Book: Sprint by Jake Knapp"
         ]
@@ -1085,7 +1080,7 @@
             "Participate in competitions like RoboCup or FIRST Robotics"
         ]
     },
-    "ai-natural-language-processing/Strong Python and ML foundation": {
+    "ai-natural-language-processing/Learn Python and ML foundation": {
         "roadmapDetails": "Before specializing in NLP, you must have a strong foundation in Python programming and general machine learning concepts. Be comfortable with libraries like NumPy, Pandas, and Scikit-learn, and understand topics like regression, classification, and model evaluation.",
         "resources": [
             "Complete the Data Science or Machine Learning Engineer roadmap first",
@@ -1315,7 +1310,7 @@
         "resources": [
             "Google's Technical Writing Courses",
             "Book: On Writing Well by William Zinsser",
-            "The "I'd Rather Be Writing" blog by Tom Johnson",
+            "The \"I'd Rather Be Writing\" blog by Tom Johnson",
             "Write the Docs community"
         ]
     },
@@ -1400,7 +1395,7 @@
             "Sprout Social blog"
         ]
     },
-    "computer-vision-engineer/Strong Python and ML foundation": {
+    "computer-vision-engineer/Learn Python and ML foundation": {
         "roadmapDetails": "Computer vision is a subfield of machine learning. You must have a strong foundation in Python and general ML concepts (regression, classification, etc.) before specializing. Be proficient with NumPy, Pandas, and Scikit-learn.",
         "resources": [
             "Complete the Data Science or Machine Learning Engineer roadmap first",
@@ -1536,3 +1531,5 @@
         ]
     }
 }
+
+    
