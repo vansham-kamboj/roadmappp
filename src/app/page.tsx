@@ -12,17 +12,21 @@ import { Pill } from '@/components/ui/pill';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { useIsMobile } from '@/hooks/use-mobile';
 import Autoplay from "embla-carousel-autoplay";
+import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const isMobile = useIsMobile();
+  const { theme } = useTheme();
 
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, playOnInit: true })
   );
   const plugin2 = useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true })
+    Autoplay({ delay: 2500, stopOnInteraction: false, playOnInit: true })
   );
 
   useEffect(() => {

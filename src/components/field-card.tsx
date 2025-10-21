@@ -7,6 +7,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/ca
 import { FieldIcon } from '@/lib/icons';
 import { ArrowRight } from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 type FieldCardProps = {
   field: Field;
@@ -15,12 +16,14 @@ type FieldCardProps = {
 export default function FieldCard({ field }: FieldCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   useEffect(() => {
+    if (theme === 'light') return;
     const card = cardRef.current;
     if (!card || !isMounted) {
       return;
@@ -53,14 +56,14 @@ export default function FieldCard({ field }: FieldCardProps) {
         card.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
-  }, [isMounted]);
+  }, [isMounted, theme]);
 
-  const cardStyle = isMounted ? { transformStyle: 'preserve-3d' as const } : {};
+  const cardStyle = isMounted && theme === 'dark' ? { transformStyle: 'preserve-3d' as const } : {};
 
   return (
     <Link href={`/roadmap/${field.id}`} className="group block h-full">
       <Card ref={cardRef} className="h-full transition-all duration-200 ease-out bg-card/50 backdrop-blur-sm group-hover:border-primary group-hover:shadow-2xl group-hover:shadow-primary/20 dark:bg-card/50" style={cardStyle}>
-        <CardHeader className="h-full">
+        <CardHeader className="h-full flex flex-col">
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-primary/10 rounded-lg">
                <FieldIcon name={field.icon} className="w-8 h-8 text-primary" />
