@@ -7,7 +7,6 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/ca
 import { FieldIcon } from '@/lib/icons';
 import { ArrowRight } from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
 
 type FieldCardProps = {
   field: Field;
@@ -15,7 +14,6 @@ type FieldCardProps = {
 
 export default function FieldCard({ field }: FieldCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -24,10 +22,7 @@ export default function FieldCard({ field }: FieldCardProps) {
 
   useEffect(() => {
     const card = cardRef.current;
-    if (!card || !isMounted || resolvedTheme !== 'dark') {
-      if (card) {
-        card.style.transform = 'none'; // Ensure transform is reset for light mode
-      }
+    if (!card || !isMounted) {
       return;
     }
 
@@ -58,9 +53,9 @@ export default function FieldCard({ field }: FieldCardProps) {
         card.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
-  }, [isMounted, resolvedTheme]);
+  }, [isMounted]);
 
-  const cardStyle = isMounted && resolvedTheme === 'dark' ? { transformStyle: 'preserve-3d' as const } : {};
+  const cardStyle = isMounted ? { transformStyle: 'preserve-3d' as const } : {};
 
   return (
     <Link href={`/roadmap/${field.id}`} className="group block h-full">

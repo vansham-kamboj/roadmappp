@@ -1,4 +1,7 @@
 
+'use client';
+
+import { useState } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { ROADMAP_DATA } from '@/lib/roadmap-data';
@@ -8,6 +11,13 @@ import { Search } from 'lucide-react';
 import { Pill } from '@/components/ui/pill';
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredFields = ROADMAP_DATA.filter(field =>
+    field.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    field.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -28,6 +38,8 @@ export default function Home() {
               type="search"
               placeholder="Search for a roadmap (e.g., 'Frontend')..."
               className="w-full pl-12 pr-4 py-6 rounded-full bg-card/60"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </section>
@@ -36,14 +48,13 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-2 md:gap-4">
                 <Pill>Structured Roadmaps</Pill>
                 <Pill>Curated Resources</Pill>
-                <Pill>AI-Powered Guidance</Pill>
                 <Pill>Community Driven</Pill>
             </div>
         </section>
 
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ROADMAP_DATA.map((field) => (
+            {filteredFields.map((field) => (
               <FieldCard key={field.id} field={field} />
             ))}
           </div>

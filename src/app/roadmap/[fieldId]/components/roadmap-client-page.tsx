@@ -61,7 +61,7 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   const headerContent = (
     <div className="mb-8 text-center">
       <FieldIcon name={field.icon} className="mx-auto w-16 h-16 text-primary mb-4" />
-      <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground dark:text-white dark:lg:text-primary">{field.name} Roadmap</h1>
+      <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground lg:text-primary">{field.name} Roadmap</h1>
       <p className="mt-2 text-lg text-muted-foreground max-w-3xl mx-auto">{field.details}</p>
       {relatedFields.length > 0 && (
         <div className="mt-6 flex justify-center gap-2 flex-wrap">
@@ -84,12 +84,12 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
         <div className="container mx-auto py-8">
             {headerContent}
             <div className="lg:hidden text-center mb-8">
-              <SidebarTrigger asChild>
-                  <Button variant="outline">
-                      <PanelLeftOpen className="mr-2"/>
-                      View Roadmap
-                  </Button>
-              </SidebarTrigger>
+                <SidebarTrigger asChild>
+                    <Button variant="outline">
+                        <PanelLeftOpen className="mr-2"/>
+                        View Roadmap
+                    </Button>
+                </SidebarTrigger>
             </div>
             <Sidebar side="left">
                 <SidebarContent>
