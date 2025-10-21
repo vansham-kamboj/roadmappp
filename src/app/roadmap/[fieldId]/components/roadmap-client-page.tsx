@@ -1,19 +1,26 @@
+
 "use client";
 
 import { useState, useCallback } from 'react';
 import type { Field, RoadmapStep } from '@/lib/roadmap-data';
 import type { AggregateResourcesOutput } from '@/ai/flows/ai-resource-aggregation';
-import { aggregateResources } from '@/ai/flows/ai-resource-aggregation';
 import { FieldIcon } from '@/lib/icons';
 import RoadmapTimeline from './roadmap-timeline';
 import StepDetails from './step-details';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import detailsData from '@/lib/roadmap-details.json';
 
 interface RoadmapClientPageProps {
   field: Field;
   relatedFields: Field[];
 }
+
+// A type guard to ensure the composite key exists in our detailsData
+type DetailsKey = keyof typeof detailsData;
+const isDetailsKey = (key: string): key is DetailsKey => {
+  return key in detailsData;
+};
 
 export default function RoadmapClientPage({ field, relatedFields }: RoadmapClientPageProps) {
   const [selectedStep, setSelectedStep] = useState<RoadmapStep | null>(null);
@@ -21,22 +28,31 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleStepSelect = useCallback(async (step: RoadmapStep) => {
+  const handleStepSelect = useCallback((step: RoadmapStep) => {
     setSelectedStep(step);
     setIsLoading(true);
     setDetails(null);
     setError(null);
-    
-    try {
-      const result = await aggregateResources({ field: field.name, step: step.title });
-      setDetails(result);
-    } catch (e) {
-      console.error(e);
-      setError('Failed to load resources. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
-  }, [field.name]);
+
+    // Simulate a network request
+    setTimeout(() => {
+      try {
+        const key = `${field.id}/${step.title}`;
+        if (isDetailsKey(key)) {
+          setDetails(detailsData[key]);
+        } else {
+          // If you want to fall back to the AI, you could call it here.
+          // For now, we'll just show a "not found" message.
+          setError(`Details for "${step.title}" are not yet available. Please check back later.`);
+        }
+      } catch (e) {
+        console.error(e);
+        setError('Failed to load resources. Please try again.');
+      } finally {
+        setIsLoading(false);
+      }
+    }, 300); // 300ms delay to simulate loading
+  }, [field.id]);
 
   return (
     <div className="container mx-auto py-12">
@@ -57,7 +73,7 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
-        <div className="lg:pr-8">
+        <div className="lg:px-4">
           <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
         </div>
         <div className="mt-12 lg:mt-0 lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">

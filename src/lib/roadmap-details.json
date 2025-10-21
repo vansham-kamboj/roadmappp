@@ -1,0 +1,21 @@
+
+{
+  "frontend-development/Learn HTML": {
+    "roadmapDetails": "To learn HTML, start with the basic structure: `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`. Understand how to use tags like `<h1>` to `<h6>` for headings, `<p>` for paragraphs, `<a>` for links, and `<img>` for images. Practice creating lists with `<ul>`, `<ol>`, and `<li>`. Finally, learn about semantic HTML tags like `<header>`, `<footer>`, `<article>`, and `<section>` to give your pages better structure and improve SEO. A key challenge is understanding the difference between block and inline elements.",
+    "resources": [
+      "MDN Web Docs: HTML",
+      "freeCodeCamp: HTML Full Course",
+      "W3Schools HTML Tutorial",
+      "Book: HTML and CSS: Design and Build Websites by Jon Duckett"
+    ]
+  },
+  "frontend-development/Learn CSS": {
+    "roadmapDetails": "After HTML, dive into CSS to style your web pages. Begin with the fundamentals: selectors (class, ID, tag), properties, and values. Learn the box model (margin, border, padding, content). Explore positioning (static, relative, absolute, fixed, sticky) and layout techniques like Flexbox and CSS Grid, which are essential for modern responsive design. A common challenge is understanding selector specificity and how the cascade works. Practice by trying to clone the layout of your favorite websites.",
+    "resources": [
+      "MDN Web Docs: CSS",
+      "CSS-Tricks: A Guide to Flexbox",
+      "CSS Grid Garden - A game for learning CSS grid",
+      "freeCodeCamp: CSS Full Course"
+    ]
+  }
+}
