@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className={`font-body antialiased ${inter.variable} ${spaceGrotesk.variable}`}>
         <BackgroundAnimation />
-        <div className="relative z-10">
+        <div className="relative z-0">
           {children}
         </div>
         <Toaster />
