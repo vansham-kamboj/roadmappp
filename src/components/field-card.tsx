@@ -24,7 +24,12 @@ export default function FieldCard({ field }: FieldCardProps) {
 
   useEffect(() => {
     const card = cardRef.current;
-    if (!card || !isMounted || resolvedTheme !== 'dark') return;
+    if (!card || !isMounted || resolvedTheme !== 'dark') {
+      if (card) {
+        card.style.transform = 'none'; // Ensure transform is reset for light mode
+      }
+      return;
+    }
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = card.getBoundingClientRect();
@@ -48,12 +53,14 @@ export default function FieldCard({ field }: FieldCardProps) {
     card.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      card.removeEventListener('mousemove', handleMouseMove);
-      card.removeEventListener('mouseleave', handleMouseLeave);
+      if (card) {
+        card.removeEventListener('mousemove', handleMouseMove);
+        card.removeEventListener('mouseleave', handleMouseLeave);
+      }
     };
   }, [isMounted, resolvedTheme]);
 
-  const cardStyle = resolvedTheme === 'dark' ? { transformStyle: 'preserve-3d' as const } : {};
+  const cardStyle = isMounted && resolvedTheme === 'dark' ? { transformStyle: 'preserve-3d' as const } : {};
 
   return (
     <Link href={`/roadmap/${field.id}`} className="group block h-full">
