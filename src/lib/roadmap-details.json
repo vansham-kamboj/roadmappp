@@ -15,7 +15,217 @@
       "MDN Web Docs: CSS",
       "CSS-Tricks: A Guide to Flexbox",
       "CSS Grid Garden - A game for learning CSS grid",
-      "freeCodeCamp: CSS Full Course"
+      "freeCodeCamp: CSS Full Course",
+      "Book: CSS in Depth by Keith J. Grant"
+    ]
+  },
+  "frontend-development/Learn JavaScript": {
+    "roadmapDetails": "JavaScript brings your website to life. Start with the basics: variables, data types, operators, and control flow (if/else, loops). Progress to functions, objects, and arrays. A crucial concept to master is the Document Object Model (DOM) for manipulating HTML elements. Then, move on to asynchronous JavaScript (Promises, async/await) for handling network requests. A common hurdle is understanding scope and closures.",
+    "resources": [
+      "MDN Web Docs: JavaScript",
+      "The Modern JavaScript Tutorial (javascript.info)",
+      "Eloquent JavaScript by Marijn Haverbeke",
+      "freeCodeCamp: JavaScript Algorithms and Data Structures"
+    ]
+  },
+  "frontend-development/Master a Framework": {
+    "roadmapDetails": "Frameworks provide structure for large applications. React, Vue, and Angular are the most popular choices. Pick one and learn its core concepts: components, state management, and routing. For React, understand JSX, props, state, and hooks. For Vue, learn its template syntax and reactivity system. For Angular, grasp modules, components, and dependency injection. The challenge lies in thinking in components and managing application state effectively.",
+    "resources": [
+      "React Official Docs",
+      "Vue.js Official Docs",
+      "Angular Official Docs",
+      "The Net Ninja - React Tutorial (YouTube)",
+      "Fullstack.io"
+    ]
+  },
+  "frontend-development/Build and Deploy": {
+    "roadmapDetails": "Theory is good, but practice is better. Build several projects of increasing complexity, such as a to-do list, a weather app, or a simple e-commerce site. This will solidify your knowledge. Learn to use Git for version control. Finally, deploy your projects using services like Vercel, Netlify, or GitHub Pages to share your work with the world and build a portfolio.",
+    "resources": [
+      "Git Handbook",
+      "Vercel Documentation",
+      "Netlify Documentation",
+      "Frontend Mentor - Challenges to build real projects",
+      "Dev.to community for project ideas"
+    ]
+  },
+  "backend-development/Choose a Language": {
+    "roadmapDetails": "The first step in backend is choosing a programming language. Node.js (with JavaScript/TypeScript) is great for full-stack development. Python (with Django/Flask) is popular for its simplicity and data science capabilities. Go is known for high performance and concurrency. Choose one that interests you and aligns with your goals. Focus on learning its syntax, standard library, and ecosystem.",
+    "resources": [
+      "Node.js Official Docs",
+      "The Python Tutorial",
+      "A Tour of Go",
+      "Book: Automate the Boring Stuff with Python by Al Sweigart"
+    ]
+  },
+  "backend-development/Understand Databases": {
+    "roadmapDetails": "Data is the heart of most applications. Learn about the two main types of databases: SQL (relational) like PostgreSQL or MySQL, and NoSQL (non-relational) like MongoDB or Redis. Understand how to design a database schema, write queries to create, read, update, and delete (CRUD) data. Grasp the concepts of normalization for SQL and data modeling for NoSQL.",
+    "resources": [
+      "PostgreSQL Tutorial",
+      "MongoDB University",
+      "SQLBolt - Interactive SQL Tutorial",
+      "Book: Designing Data-Intensive Applications by Martin Kleppmann"
+    ]
+  },
+  "backend-development/Build an API": {
+    "roadmapDetails": "APIs (Application Programming Interfaces) allow your frontend to communicate with your backend. Learn about REST principles and how to create endpoints for different resources using HTTP methods (GET, POST, PUT, DELETE). Alternatively, explore GraphQL, a query language for your API. Practice building a complete CRUD API for a simple application like a blog.",
+    "resources": [
+      "MDN Web Docs: Introduction to REST",
+      "GraphQL Official Docs",
+      "Postman - API Client for testing",
+      "Building a RESTful API with Node.js and Express"
+    ]
+  },
+  "backend-development/Authentication & Security": {
+    "roadmapDetails": "Securing your application is critical. Learn how to implement user authentication and authorization. Understand different strategies like session-based authentication (cookies) and token-based authentication (JWT - JSON Web Tokens). Learn about common vulnerabilities like SQL Injection and Cross-Site Scripting (XSS) and how to prevent them. Implement password hashing and secure API key management.",
+    "resources": [
+      "OWASP Top 10 Security Risks",
+      "JWT.io",
+      "Auth0 Docs on Authentication",
+      "The Web Developer's Guide to Crypto"
+    ]
+  },
+  "backend-development/Containerization": {
+    "roadmapDetails": "Docker allows you to package your application and its dependencies into a standardized unit called a container. This ensures your application runs the same way everywhere. Learn how to write a Dockerfile to define your application's environment. Understand how to build images and run containers. Docker simplifies development, testing, and deployment.",
+    "resources": [
+      "Docker Official Docs - Get Started",
+      "Play with Docker - A hands-on tutorial environment",
+      "The Docker Handbook by freeCodeCamp",
+      "YouTube: Docker Tutorial for Beginners"
+    ]
+  },
+  "devops/Learn a Scripting Language": {
+    "roadmapDetails": "Automation is at the core of DevOps. A scripting language is your primary tool for this. Bash is essential for interacting with the Linux command line. Python is incredibly versatile for writing more complex scripts, interacting with APIs, and automating tasks. Go is gaining popularity for its performance and concurrency in building CLI tools. Master one to automate repetitive tasks.",
+    "resources": [
+      "The Bash Guide",
+      "Google's Python Class",
+      "Go by Example",
+      "Book: The Linux Command Line by William Shotts"
+    ]
+  },
+  "devops/Understand Linux & Networking": {
+    "roadmapDetails": "Most servers in the world run on Linux. You must be comfortable with the command line. Learn about file permissions, process management, and system administration. For networking, understand the TCP/IP model, DNS, HTTP/HTTPS, firewalls, and load balancers. These fundamentals are crucial for managing and troubleshooting infrastructure.",
+    "resources": [
+      "linuxjourney.com",
+      "An Introduction to Computer Networks by Beej's Guide",
+      "Networking for Dummies Cheat Sheet",
+      "Professor Messer's Network+ Training Course (YouTube)"
+    ]
+  },
+  "devops/Infrastructure as Code": {
+    "roadmapDetails": "Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through code, rather than manual processes. Terraform is the industry standard for this. Learn how to write Terraform configurations to define your cloud resources (servers, databases, networks) in a declarative way. This makes your infrastructure repeatable, versionable, and scalable.",
+    "resources": [
+      "Terraform Official Docs - Get Started",
+      "HashiCorp Learn",
+      "Book: Terraform: Up & Running by Yevgeniy Brikman",
+      "YouTube: Terraform Explained in 15 Mins"
+    ]
+  },
+  "devops/CI/CD Pipelines": {
+    "roadmapDetails": "Continuous Integration (CI) and Continuous Deployment (CD) automate the process of building, testing, and deploying your code. Learn to use tools like GitHub Actions, Jenkins, or GitLab CI. Understand how to create a pipeline that automatically runs tests when code is pushed, builds an artifact (like a Docker image), and deploys it to a server. This practice increases development speed and reduces errors.",
+    "resources": [
+      "GitHub Actions Documentation",
+      "Jenkins User Documentation",
+      "GitLab CI/CD Documentation",
+      "The Phoenix Project (A book about DevOps)"
+    ]
+  },
+  "devops/Container Orchestration": {
+    "roadmapDetails": "While Docker helps you run one container, Kubernetes helps you run and manage thousands of them across many machines. It's the de-facto standard for container orchestration. Learn its core concepts: Pods, Services, Deployments, and ReplicaSets. Understand how Kubernetes handles scaling, self-healing, and service discovery. It is a complex but powerful tool for running modern applications.",
+    "resources": [
+      "Kubernetes Official Docs",
+      "The Kubernetes Handbook by freeCodeCamp",
+      "killer.sh - CKA/CKAD/CKS Exam Simulator",
+      "Book: Kubernetes in Action by Marko Lukša"
+    ]
+  },
+  "ui-ux-design/Design Fundamentals": {
+    "roadmapDetails": "Before creating interfaces, you must understand the principles of good design. Study color theory to create harmonious palettes. Learn typography to ensure readability and create hierarchy. Understand layout and composition principles like balance, proximity, and white space. These fundamentals are the building blocks of any visually appealing and effective design.",
+    "resources": [
+      "Material Design - Color System",
+      "Google Fonts",
+      "Book: Making and Breaking the Grid by Timothy Samara",
+      "Hack-Design - An easy to follow design course"
+    ]
+  },
+  "ui-ux-design/User Research": {
+    "roadmapDetails": "You are not your user. User research is about understanding the behaviors, needs, and motivations of your target audience. Learn methods like user interviews, surveys, and creating user personas. This research is foundational to UX design and ensures you are solving the right problems for the right people, leading to a much more successful product.",
+    "resources": [
+      "Nielsen Norman Group - User Research",
+      "Book: Just Enough Research by Erika Hall",
+      "SurveyMonkey for creating surveys",
+      "UX Tools - A list of tools for user research"
+    ]
+  },
+  "ui-ux-design/Wireframing & Prototyping": {
+    "roadmapDetails": "This is where ideas start to take visual form. Wireframes are low-fidelity, basic layouts that focus on structure and functionality. Prototypes are high-fidelity, interactive mockups that look and feel like the final product. Learn to create both. This process allows you to test and iterate on your ideas quickly and cheaply before writing any code.",
+    "resources": [
+      "Balsamiq Wireframes",
+      "UXPin - The Guide to Wireframing",
+      "InVision - Prototyping Tool",
+      "Book: Sprint by Jake Knapp"
+    ]
+  },
+  "ui-ux-design/Master a Design Tool": {
+    "roadmapDetails": "A design tool is your primary canvas. Figma has become the industry standard due to its collaborative nature and powerful features. Sketch and Adobe XD are also strong contenders. Pick one and master it. Learn how to create layouts, use components, and build interactive prototypes. Becoming proficient in your tool will dramatically speed up your workflow.",
+    "resources": [
+      "Figma Learn",
+      "Sketch Official Tutorials",
+      "Adobe XD User Guide",
+      "YouTube: Figma Crash Course"
+    ]
+  },
+  "ui-ux-design/Usability Testing": {
+    "roadmapDetails": "Usability testing involves observing real users as they interact with your prototype or product. The goal is to identify any confusion, frustration, or problems in the user experience. Learn how to plan and conduct a usability test, and how to analyze the feedback to make data-driven improvements to your design. This is a crucial step for validating your design decisions.",
+    "resources": [
+      "Nielsen Norman Group - Usability Testing 101",
+      "Maze - Rapid usability testing platform",
+      "Lookback - User research and testing platform",
+      "Book: Rocket Surgery Made Easy by Steve Krug"
+    ]
+  },
+  "cloud-computing/Cloud Fundamentals": {
+    "roadmapDetails": "Start by understanding the core principles of cloud computing. Learn the service models: IaaS (Infrastructure as a Service), PaaS (Platform as a Service), and SaaS (Software as a Service). Understand the deployment models: public, private, and hybrid clouds. Grasp key concepts like virtualization, scalability, elasticity, and pay-as-you-go pricing.",
+    "resources": [
+      "Introduction to Cloud Computing (AWS)",
+      "Microsoft Azure Fundamentals",
+      "Google Cloud overview",
+      "Book: Cloud Computing For Dummies"
+    ]
+  },
+  "cloud-computing/Choose a Platform": {
+    "roadmapDetails": "The big three cloud providers are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). While concepts are similar across platforms, they have different services and interfaces. It's recommended to pick one to specialize in initially. AWS is the market leader, Azure is strong in the enterprise space, and GCP is known for its data and networking capabilities.",
+    "resources": [
+      "AWS vs. Azure vs. Google Cloud: What's the best cloud platform",
+      "AWS Certified Cloud Practitioner",
+      "Azure Fundamentals certification (AZ-900)",
+      "Google Cloud Digital Leader"
+    ]
+  },
+  "cloud-computing/Core Services": {
+    "roadmapDetails": "Every cloud platform has core services for compute, storage, and networking. For compute, learn about virtual machines (EC2 on AWS, VMs on Azure, Compute Engine on GCP). For storage, understand object storage (S3, Blob Storage, Cloud Storage) and block storage. For networking, learn about Virtual Private Clouds (VPC), subnets, and security groups.",
+    "resources": [
+      "AWS Core Services Overview",
+      "Introduction to Azure core services",
+      "Google Cloud's core infrastructure",
+      "A Cloud Guru - Training Platform"
+    ]
+  },
+  "cloud-computing/Serverless Architecture": {
+    "roadmapDetails": "Serverless allows you to build and run applications without thinking about servers. It's about using managed services and Functions as a Service (FaaS) like AWS Lambda, Azure Functions, or Google Cloud Functions. Learn how to write event-driven functions that trigger in response to events, like an image upload or an API request. This approach can reduce cost and operational overhead.",
+    "resources": [
+      "Serverless Land (AWS)",
+      "Azure Functions documentation",
+      "Google Cloud Functions documentation",
+      "The Serverless Framework"
+    ]
+  },
+  "cloud-computing/Cloud Security": {
+    "roadmapDetails": "Security in the cloud is a shared responsibility. The cloud provider secures the cloud itself, but you are responsible for securing what you put in the cloud. Learn about Identity and Access Management (IAM) to control who can do what. Understand network security (security groups, NACLs), data encryption (at rest and in transit), and logging/monitoring for suspicious activity.",
+    "resources": [
+      "AWS Security Best Practices",
+      "Introduction to Azure security",
+      "Google Cloud security foundations",
+      "AWS Certified Security - Specialty"
     ]
   }
 }
