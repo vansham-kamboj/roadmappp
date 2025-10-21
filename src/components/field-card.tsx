@@ -6,7 +6,8 @@ import type { Field } from '@/lib/roadmap-data';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { FieldIcon } from '@/lib/icons';
 import { ArrowRight } from 'lucide-react';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 type FieldCardProps = {
   field: Field;
@@ -14,10 +15,16 @@ type FieldCardProps = {
 
 export default function FieldCard({ field }: FieldCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const card = cardRef.current;
-    if (!card) return;
+    if (!card || !isMounted || resolvedTheme !== 'dark') return;
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = card.getBoundingClientRect();
@@ -44,11 +51,13 @@ export default function FieldCard({ field }: FieldCardProps) {
       card.removeEventListener('mousemove', handleMouseMove);
       card.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [isMounted, resolvedTheme]);
+
+  const cardStyle = resolvedTheme === 'dark' ? { transformStyle: 'preserve-3d' as const } : {};
 
   return (
     <Link href={`/roadmap/${field.id}`} className="group block h-full">
-      <Card ref={cardRef} className="h-full transition-all duration-200 ease-out bg-card/50 backdrop-blur-sm group-hover:border-primary group-hover:shadow-2xl group-hover:shadow-primary/20" style={{ transformStyle: 'preserve-3d' }}>
+      <Card ref={cardRef} className="h-full transition-all duration-200 ease-out bg-card/50 backdrop-blur-sm group-hover:border-primary group-hover:shadow-2xl group-hover:shadow-primary/20 dark:bg-card/50" style={cardStyle}>
         <CardHeader className="h-full">
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-primary/10 rounded-lg">
@@ -56,7 +65,7 @@ export default function FieldCard({ field }: FieldCardProps) {
             </div>
             <ArrowRight className="w-5 h-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" />
           </div>
-          <CardTitle className="font-headline text-xl text-white">{field.name}</CardTitle>
+          <CardTitle className="font-headline text-xl text-foreground dark:text-white">{field.name}</CardTitle>
           <CardDescription className="pt-2 flex-grow">{field.description}</CardDescription>
         </CardHeader>
       </Card>
