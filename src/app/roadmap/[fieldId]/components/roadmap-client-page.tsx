@@ -10,11 +10,6 @@ import StepDetails from './step-details';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import detailsData from '@/lib/roadmap-details.json';
-import { SidebarProvider, Sidebar, SidebarTrigger, SidebarContent, SidebarHeader } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
-import { PanelLeftOpen } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
-
 
 interface RoadmapClientPageProps {
   field: Field;
@@ -32,7 +27,6 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
   const [details, setDetails] = useState<AggregateResourcesOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const isMobile = useIsMobile();
 
   const handleStepSelect = useCallback((step: RoadmapStep) => {
     setSelectedStep(step);
@@ -76,48 +70,16 @@ export default function RoadmapClientPage({ field, relatedFields }: RoadmapClien
     </div>
   );
 
-  const timeline = <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />;
-
-  if (isMobile) {
-    return (
-      <SidebarProvider>
-        <div className="container mx-auto py-8">
-            {headerContent}
-            <div className="text-center mb-8">
-                <SidebarTrigger asChild>
-                    <Button variant="outline">
-                        <PanelLeftOpen className="mr-2 h-4 w-4"/>
-                        View Roadmap
-                    </Button>
-                </SidebarTrigger>
-            </div>
-            <Sidebar side="left">
-                <SidebarContent className="bg-card">
-                    <SidebarHeader className="p-4 border-b">
-                        <h2 className="text-2xl font-bold font-headline text-foreground">Roadmap Steps</h2>
-                    </SidebarHeader>
-                    <div className="p-4">
-                        {timeline}
-                    </div>
-                </SidebarContent>
-            </Sidebar>
-
-            <div className="mt-8">
-                <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
-            </div>
-        </div>
-      </SidebarProvider>
-    );
-  }
-
   return (
     <div className="container mx-auto py-12">
       {headerContent}
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
         <div className="lg:px-4">
-          {timeline}
+          <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Roadmap Steps</h2>
+          <RoadmapTimeline roadmap={field.roadmap} onStepSelect={handleStepSelect} selectedStep={selectedStep} />
         </div>
         <div className="mt-12 lg:mt-0 lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
+           <h2 className="text-2xl font-bold font-headline text-foreground mb-6 text-center lg:text-left">Step Details</h2>
           <StepDetails details={details} isLoading={isLoading} error={error} selectedStep={selectedStep} />
         </div>
       </div>
