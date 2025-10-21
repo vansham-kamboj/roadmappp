@@ -1,405 +1,1538 @@
 
 {
-  "frontend-development/Learn HTML": {
-    "roadmapDetails": "To learn HTML, start with the basic structure: `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`. Understand how to use tags like `<h1>` to `<h6>` for headings, `<p>` for paragraphs, `<a>` for links, and `<img>` for images. Practice creating lists with `<ul>`, `<ol>`, and `<li>`. Finally, learn about semantic HTML tags like `<header>`, `<footer>`, `<article>`, and `<section>` to give your pages better structure and improve SEO. A key challenge is understanding the difference between block and inline elements.",
-    "resources": [
-      "MDN Web Docs: HTML",
-      "freeCodeCamp: HTML Full Course",
-      "W3Schools HTML Tutorial",
-      "Book: HTML and CSS: Design and Build Websites by Jon Duckett"
-    ]
-  },
-  "frontend-development/Learn CSS": {
-    "roadmapDetails": "After HTML, dive into CSS to style your web pages. Begin with the fundamentals: selectors (class, ID, tag), properties, and values. Learn the box model (margin, border, padding, content). Explore positioning (static, relative, absolute, fixed, sticky) and layout techniques like Flexbox and CSS Grid, which are essential for modern responsive design. A common challenge is understanding selector specificity and how the cascade works. Practice by trying to clone the layout of your favorite websites.",
-    "resources": [
-      "MDN Web Docs: CSS",
-      "CSS-Tricks: A Guide to Flexbox",
-      "CSS Grid Garden - A game for learning CSS grid",
-      "freeCodeCamp: CSS Full Course",
-      "Book: CSS in Depth by Keith J. Grant"
-    ]
-  },
-  "frontend-development/Learn JavaScript": {
-    "roadmapDetails": "JavaScript brings your website to life. Start with the basics: variables, data types, operators, and control flow (if/else, loops). Progress to functions, objects, and arrays. A crucial concept to master is the Document Object Model (DOM) for manipulating HTML elements. Then, move on to asynchronous JavaScript (Promises, async/await) for handling network requests. A common hurdle is understanding scope and closures.",
-    "resources": [
-      "MDN Web Docs: JavaScript",
-      "The Modern JavaScript Tutorial (javascript.info)",
-      "Eloquent JavaScript by Marijn Haverbeke",
-      "freeCodeCamp: JavaScript Algorithms and Data Structures"
-    ]
-  },
-  "frontend-development/Master a Framework": {
-    "roadmapDetails": "Frameworks provide structure for large applications. React, Vue, and Angular are the most popular choices. Pick one and learn its core concepts: components, state management, and routing. For React, understand JSX, props, state, and hooks. For Vue, learn its template syntax and reactivity system. For Angular, grasp modules, components, and dependency injection. The challenge lies in thinking in components and managing application state effectively.",
-    "resources": [
-      "React Official Docs",
-      "Vue.js Official Docs",
-      "Angular Official Docs",
-      "The Net Ninja - React Tutorial (YouTube)",
-      "Fullstack.io"
-    ]
-  },
-  "frontend-development/Build and Deploy": {
-    "roadmapDetails": "Theory is good, but practice is better. Build several projects of increasing complexity, such as a to-do list, a weather app, or a simple e-commerce site. This will solidify your knowledge. Learn to use Git for version control. Finally, deploy your projects using services like Vercel, Netlify, or GitHub Pages to share your work with the world and build a portfolio.",
-    "resources": [
-      "Git Handbook",
-      "Vercel Documentation",
-      "Netlify Documentation",
-      "Frontend Mentor - Challenges to build real projects",
-      "Dev.to community for project ideas"
-    ]
-  },
-  "backend-development/Choose a Language": {
-    "roadmapDetails": "The first step in backend is choosing a programming language. Node.js (with JavaScript/TypeScript) is great for full-stack development. Python (with Django/Flask) is popular for its simplicity and data science capabilities. Go is known for high performance and concurrency. Choose one that interests you and aligns with your goals. Focus on learning its syntax, standard library, and ecosystem.",
-    "resources": [
-      "Node.js Official Docs",
-      "The Python Tutorial",
-      "A Tour of Go",
-      "Book: Automate the Boring Stuff with Python by Al Sweigart"
-    ]
-  },
-  "backend-development/Understand Databases": {
-    "roadmapDetails": "Data is the heart of most applications. Learn about the two main types of databases: SQL (relational) like PostgreSQL or MySQL, and NoSQL (non-relational) like MongoDB or Redis. Understand how to design a database schema, write queries to create, read, update, and delete (CRUD) data. Grasp the concepts of normalization for SQL and data modeling for NoSQL.",
-    "resources": [
-      "PostgreSQL Tutorial",
-      "MongoDB University",
-      "SQLBolt - Interactive SQL Tutorial",
-      "Book: Designing Data-Intensive Applications by Martin Kleppmann"
-    ]
-  },
-  "backend-development/Build an API": {
-    "roadmapDetails": "APIs (Application Programming Interfaces) allow your frontend to communicate with your backend. Learn about REST principles and how to create endpoints for different resources using HTTP methods (GET, POST, PUT, DELETE). Alternatively, explore GraphQL, a query language for your API. Practice building a complete CRUD API for a simple application like a blog.",
-    "resources": [
-      "MDN Web Docs: Introduction to REST",
-      "GraphQL Official Docs",
-      "Postman - API Client for testing",
-      "Building a RESTful API with Node.js and Express"
-    ]
-  },
-  "backend-development/Authentication & Security": {
-    "roadmapDetails": "Securing your application is critical. Learn how to implement user authentication and authorization. Understand different strategies like session-based authentication (cookies) and token-based authentication (JWT - JSON Web Tokens). Learn about common vulnerabilities like SQL Injection and Cross-Site Scripting (XSS) and how to prevent them. Implement password hashing and secure API key management.",
-    "resources": [
-      "OWASP Top 10 Security Risks",
-      "JWT.io",
-      "Auth0 Docs on Authentication",
-      "The Web Developer's Guide to Crypto"
-    ]
-  },
-  "backend-development/Containerization": {
-    "roadmapDetails": "Docker allows you to package your application and its dependencies into a standardized unit called a container. This ensures your application runs the same way everywhere. Learn how to write a Dockerfile to define your application's environment. Understand how to build images and run containers. Docker simplifies development, testing, and deployment.",
-    "resources": [
-      "Docker Official Docs - Get Started",
-      "Play with Docker - A hands-on tutorial environment",
-      "The Docker Handbook by freeCodeCamp",
-      "YouTube: Docker Tutorial for Beginners"
-    ]
-  },
-  "devops/Learn a Scripting Language": {
-    "roadmapDetails": "Automation is at the core of DevOps. A scripting language is your primary tool for this. Bash is essential for interacting with the Linux command line. Python is incredibly versatile for writing more complex scripts, interacting with APIs, and automating tasks. Go is gaining popularity for its performance and concurrency in building CLI tools. Master one to automate repetitive tasks.",
-    "resources": [
-      "The Bash Guide",
-      "Google's Python Class",
-      "Go by Example",
-      "Book: The Linux Command Line by William Shotts"
-    ]
-  },
-  "devops/Understand Linux & Networking": {
-    "roadmapDetails": "Most servers in the world run on Linux. You must be comfortable with the command line. Learn about file permissions, process management, and system administration. For networking, understand the TCP/IP model, DNS, HTTP/HTTPS, firewalls, and load balancers. These fundamentals are crucial for managing and troubleshooting infrastructure.",
-    "resources": [
-      "linuxjourney.com",
-      "An Introduction to Computer Networks by Beej's Guide",
-      "Networking for Dummies Cheat Sheet",
-      "Professor Messer's Network+ Training Course (YouTube)"
-    ]
-  },
-  "devops/Infrastructure as Code": {
-    "roadmapDetails": "Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through code, rather than manual processes. Terraform is the industry standard for this. Learn how to write Terraform configurations to define your cloud resources (servers, databases, networks) in a declarative way. This makes your infrastructure repeatable, versionable, and scalable.",
-    "resources": [
-      "Terraform Official Docs - Get Started",
-      "HashiCorp Learn",
-      "Book: Terraform: Up & Running by Yevgeniy Brikman",
-      "YouTube: Terraform Explained in 15 Mins"
-    ]
-  },
-  "devops/CI/CD Pipelines": {
-    "roadmapDetails": "Continuous Integration (CI) and Continuous Deployment (CD) automate the process of building, testing, and deploying your code. Learn to use tools like GitHub Actions, Jenkins, or GitLab CI. Understand how to create a pipeline that automatically runs tests when code is pushed, builds an artifact (like a Docker image), and deploys it to a server. This practice increases development speed and reduces errors.",
-    "resources": [
-      "GitHub Actions Documentation",
-      "Jenkins User Documentation",
-      "GitLab CI/CD Documentation",
-      "The Phoenix Project (A book about DevOps)"
-    ]
-  },
-  "devops/Container Orchestration": {
-    "roadmapDetails": "While Docker helps you run one container, Kubernetes helps you run and manage thousands of them across many machines. It's the de-facto standard for container orchestration. Learn its core concepts: Pods, Services, Deployments, and ReplicaSets. Understand how Kubernetes handles scaling, self-healing, and service discovery. It is a complex but powerful tool for running modern applications.",
-    "resources": [
-      "Kubernetes Official Docs",
-      "The Kubernetes Handbook by freeCodeCamp",
-      "killer.sh - CKA/CKAD/CKS Exam Simulator",
-      "Book: Kubernetes in Action by Marko Lukša"
-    ]
-  },
-  "ui-ux-design/Design Fundamentals": {
-    "roadmapDetails": "Before creating interfaces, you must understand the principles of good design. Study color theory to create harmonious palettes. Learn typography to ensure readability and create hierarchy. Understand layout and composition principles like balance, proximity, and white space. These fundamentals are the building blocks of any visually appealing and effective design.",
-    "resources": [
-      "Material Design - Color System",
-      "Google Fonts",
-      "Book: Making and Breaking the Grid by Timothy Samara",
-      "Hack-Design - An easy to follow design course"
-    ]
-  },
-  "ui-ux-design/User Research": {
-    "roadmapDetails": "You are not your user. User research is about understanding the behaviors, needs, and motivations of your target audience. Learn methods like user interviews, surveys, and creating user personas. This research is foundational to UX design and ensures you are solving the right problems for the right people, leading to a much more successful product.",
-    "resources": [
-      "Nielsen Norman Group - User Research",
-      "Book: Just Enough Research by Erika Hall",
-      "SurveyMonkey for creating surveys",
-      "UX Tools - A list of tools for user research"
-    ]
-  },
-  "ui-ux-design/Wireframing & Prototyping": {
-    "roadmapDetails": "This is where ideas start to take visual form. Wireframes are low-fidelity, basic layouts that focus on structure and functionality. Prototypes are high-fidelity, interactive mockups that look and feel like the final product. Learn to create both. This process allows you to test and iterate on your ideas quickly and cheaply before writing any code.",
-    "resources": [
-      "Balsamiq Wireframes",
-      "UXPin - The Guide to Wireframing",
-      "InVision - Prototyping Tool",
-      "Book: Sprint by Jake Knapp"
-    ]
-  },
-  "ui-ux-design/Master a Design Tool": {
-    "roadmapDetails": "A design tool is your primary canvas. Figma has become the industry standard due to its collaborative nature and powerful features. Sketch and Adobe XD are also strong contenders. Pick one and master it. Learn how to create layouts, use components, and build interactive prototypes. Becoming proficient in your tool will dramatically speed up your workflow.",
-    "resources": [
-      "Figma Learn",
-      "Sketch Official Tutorials",
-      "Adobe XD User Guide",
-      "YouTube: Figma Crash Course"
-    ]
-  },
-  "ui-ux-design/Usability Testing": {
-    "roadmapDetails": "Usability testing involves observing real users as they interact with your prototype or product. The goal is to identify any confusion, frustration, or problems in the user experience. Learn how to plan and conduct a usability test, and how to analyze the feedback to make data-driven improvements to your design. This is a crucial step for validating your design decisions.",
-    "resources": [
-      "Nielsen Norman Group - Usability Testing 101",
-      "Maze - Rapid usability testing platform",
-      "Lookback - User research and testing platform",
-      "Book: Rocket Surgery Made Easy by Steve Krug"
-    ]
-  },
-  "cloud-computing/Cloud Fundamentals": {
-    "roadmapDetails": "Start by understanding the core principles of cloud computing. Learn the service models: IaaS (Infrastructure as a Service), PaaS (Platform as a Service), and SaaS (Software as a Service). Understand the deployment models: public, private, and hybrid clouds. Grasp key concepts like virtualization, scalability, elasticity, and pay-as-you-go pricing.",
-    "resources": [
-      "Introduction to Cloud Computing (AWS)",
-      "Microsoft Azure Fundamentals",
-      "Google Cloud overview",
-      "Book: Cloud Computing For Dummies"
-    ]
-  },
-  "cloud-computing/Choose a Platform": {
-    "roadmapDetails": "The big three cloud providers are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). While concepts are similar across platforms, they have different services and interfaces. It's recommended to pick one to specialize in initially. AWS is the market leader, Azure is strong in the enterprise space, and GCP is known for its data and networking capabilities.",
-    "resources": [
-      "AWS vs. Azure vs. Google Cloud: What's the best cloud platform",
-      "AWS Certified Cloud Practitioner",
-      "Azure Fundamentals certification (AZ-900)",
-      "Google Cloud Digital Leader"
-    ]
-  },
-  "cloud-computing/Core Services": {
-    "roadmapDetails": "Every cloud platform has core services for compute, storage, and networking. For compute, learn about virtual machines (EC2 on AWS, VMs on Azure, Compute Engine on GCP). For storage, understand object storage (S3, Blob Storage, Cloud Storage) and block storage. For networking, learn about Virtual Private Clouds (VPC), subnets, and security groups.",
-    "resources": [
-      "AWS Core Services Overview",
-      "Introduction to Azure core services",
-      "Google Cloud's core infrastructure",
-      "A Cloud Guru - Training Platform"
-    ]
-  },
-  "cloud-computing/Serverless Architecture": {
-    "roadmapDetails": "Serverless allows you to build and run applications without thinking about servers. It's about using managed services and Functions as a Service (FaaS) like AWS Lambda, Azure Functions, or Google Cloud Functions. Learn how to write event-driven functions that trigger in response to events, like an image upload or an API request. This approach can reduce cost and operational overhead.",
-    "resources": [
-      "Serverless Land (AWS)",
-      "Azure Functions documentation",
-      "Google Cloud Functions documentation",
-      "The Serverless Framework"
-    ]
-  },
-  "cloud-computing/Cloud Security": {
-    "roadmapDetails": "Security in the cloud is a shared responsibility. The cloud provider secures the cloud itself, but you are responsible for securing what you put in the cloud. Learn about Identity and Access Management (IAM) to control who can do what. Understand network security (security groups, NACLs), data encryption (at rest and in transit), and logging/monitoring for suspicious activity.",
-    "resources": [
-      "AWS Security Best Practices",
-      "Introduction to Azure security",
-      "Google Cloud security foundations",
-      "AWS Certified Security - Specialty"
-    ]
-  },
-  "data-science/Learn Python & SQL": {
-    "roadmapDetails": "Python is the lingua franca of data science, used for everything from data cleaning to model building. SQL is essential for extracting data from relational databases. Master Python's data-focused libraries like Pandas and NumPy. For SQL, practice writing queries to filter, join, and aggregate data.",
-    "resources": [
-      "Codecademy: Learn Python 3",
-      "Kaggle: Intro to SQL",
-      "Book: Python for Data Analysis by Wes McKinney",
-      "SQLZoo - Interactive SQL Tutorial"
-    ]
-  },
-  "data-science/Statistics & Probability": {
-    "roadmapDetails": "Data science is built on a foundation of statistics and probability. You need to understand concepts like descriptive statistics, probability distributions, hypothesis testing, and regression. These concepts allow you to make inferences and predictions from data.",
-    "resources": [
-      "Khan Academy: Statistics and probability",
-      "StatQuest with Josh Starmer (YouTube)",
-      "Book: Practical Statistics for Data Scientists by Peter Bruce & Andrew Bruce"
-    ]
-  },
-  "data-science/Data Wrangling & Visualization": {
-    "roadmapDetails": "Raw data is often messy. Data wrangling (or cleaning) is the process of transforming and mapping data from one raw data form into another format with the intent of making it more appropriate and valuable for a variety of downstream purposes. Then, use libraries like Matplotlib and Seaborn to create visualizations that tell a story and reveal insights.",
-    "resources": [
-      "Pandas Official Documentation",
-      "Matplotlib Official Gallery",
-      "Seaborn Official Tutorials",
-      "Kaggle: Data Cleaning"
-    ]
-  },
-  "data-science/Machine Learning Basics": {
-    "roadmapDetails": "Start with the fundamentals of machine learning. Learn the difference between supervised learning (e.g., regression, classification) and unsupervised learning (e.g., clustering). Implement basic algorithms like Linear Regression, Logistic Regression, and K-Means Clustering using Scikit-learn.",
-    "resources": [
-      "Google's Machine Learning Crash Course",
-      "Coursera: Machine Learning by Andrew Ng",
-      "Scikit-learn Official Tutorials",
-      "Book: Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow"
-    ]
-  },
-  "data-science/Build a Portfolio": {
-    "roadmapDetails": "Apply your skills to real-world datasets. Find interesting datasets on platforms like Kaggle, UCI Machine Learning Repository, or data.gov. Work through the entire data science pipeline: data cleaning, exploration, modeling, and communication of results. Document your projects in a portfolio to showcase your abilities to potential employers.",
-    "resources": [
-      "Kaggle Datasets",
-      "538 Data",
-      "How to Build a Data Science Portfolio by Dataquest",
-      "GitHub for hosting your project code and notebooks"
-    ]
-  },
-  "machine-learning/Master Python & Libraries": {
-    "roadmapDetails": "Deepen your Python skills and master the essential libraries for machine learning. NumPy for numerical operations, Pandas for data manipulation, and Scikit-learn for traditional ML algorithms are non-negotiable. Proficiency with these tools is essential for efficient data handling and modeling.",
-    "resources": [
-      "NumPy: The absolute basics for beginners",
-      "10 minutes to pandas",
-      "Scikit-learn User Guide",
-      "Book: Python for Data Analysis by Wes McKinney"
-    ]
-  },
-  "machine-learning/Advanced Math Concepts": {
-    "roadmapDetails": "To truly understand how ML algorithms work, you need to grasp the underlying math. Focus on Linear Algebra (vectors, matrices, eigenvalues), Calculus (derivatives, gradients), and Optimization (gradient descent). This knowledge is crucial for understanding and implementing deep learning models.",
-    "resources": [
-      "3Blue1Brown: Essence of linear algebra (YouTube)",
-      "Khan Academy: Multivariable calculus",
-      "An overview of gradient descent optimization algorithms"
-    ]
-  },
-  "machine-learning/Deep Learning": {
-    "roadmapDetails": "Dive into the world of neural networks. Learn about the architecture of deep neural networks, activation functions, backpropagation, and different types of layers (dense, convolutional, recurrent). Use a modern framework like TensorFlow or PyTorch to build and train your own models for tasks like image classification or text generation.",
-    "resources": [
-      "DeepLearning.AI - Specializations on Coursera",
-      "fast.ai - Practical Deep Learning for Coders",
-      "PyTorch Official Tutorials",
-      "TensorFlow Core Tutorials"
-    ]
-  },
-  "machine-learning/Model Deployment": {
-    "roadmapDetails": "A model is only useful if it can be used in an application. Learn how to take a trained model and deploy it as an API. This involves using tools like Flask or FastAPI to create a web server, containerizing your application with Docker, and potentially deploying it to a cloud service like AWS SageMaker or Google AI Platform.",
-    "resources": [
-      "Deploying Machine Learning Models (paperspace.com blog)",
-      "Flask Official Documentation",
-      "FastAPI Official Documentation",
-      "Docker Get Started"
-    ]
-  },
-  "machine-learning/Specializations": {
-    "roadmapDetails": "Once you have the fundamentals, you can specialize. Natural Language Processing (NLP) deals with text and speech. Computer Vision (CV) deals with images and video. Reinforcement Learning (RL) is about training agents to make decisions. Pick an area that interests you and go deep.",
-    "resources": [
-      "Stanford CS224n: NLP with Deep Learning",
-      "Stanford CS231n: Convolutional Neural Networks for Visual Recognition",
-      "DeepMind: Introduction to Reinforcement Learning"
-    ]
-  },
-  "game-development/Choose an Engine": {
-    "roadmapDetails": "A game engine provides the core functionality you need to make a game. Unity (using C#) is very popular, especially for indie and mobile games, and has a vast amount of learning resources. Unreal Engine (using C++ and Blueprints) is known for high-end graphics. Godot is a rising open-source alternative. Pick one and stick with it for your first few projects.",
-    "resources": [
-      "Unity Learn",
-      "Unreal Engine Online Learning",
-      "Godot Docs",
-      "Which Game Engine is Right for You? (YouTube)"
-    ]
-  },
-  "game-development/Programming Fundamentals": {
-    "roadmapDetails": "No matter the engine, you need strong programming skills. If you chose Unity, learn C#. If you chose Unreal, learn C++. Focus on core concepts like variables, loops, functions, and object-oriented programming. Game development will push your programming skills with concepts like game loops, state management, and performance optimization.",
-    "resources": [
-      "Microsoft C# Docs",
-      "learncpp.com",
-      "Book: The C# Player's Guide",
-      "Game Programming Patterns by Robert Nystrom"
-    ]
-  },
-  "game-development/Game Design Principles": {
-    "roadmapDetails": "Programming skills build the game, but design skills make it fun. Learn about core game loops, player motivation, level design, and difficulty curves. Understand how to give clear player feedback. Start by analyzing your favorite games to see how they apply these principles.",
-    "resources": [
-      "Game Maker's Toolkit (YouTube channel)",
-      "GDC (Game Developers Conference) Vault (YouTube)",
-      "Book: The Art of Game Design: A Book of Lenses by Jesse Schell"
-    ]
-  },
-  "game-development/3D/2D Art Pipeline": {
-    "roadmapDetails": "Even if you're not an artist, you need to understand how art assets are made and used. For 2D, learn about spritesheets and tilemaps. For 3D, learn about modeling, texturing, and animation. Blender is a powerful, free tool for 3D art. Understanding the pipeline will help you work better with artists or use pre-made assets more effectively.",
-    "resources": [
-      "Blender Guru Donut Tutorial (YouTube)",
-      "Pixel Art 101 by Saint11",
-      "Kenney.nl for free game assets",
-      "The Total Beginner’s Guide to Game Art"
-    ]
-  },
-  "game-development/Ship a Small Game": {
-    "roadmapDetails": "The most important step is to finish a project. Start very small. Recreate a classic like Pong or Pac-Man. The process of taking a game from idea to a finished, playable state (even if simple) is the best way to learn. Publish it on a platform like itch.io to get feedback and build your confidence.",
-    "resources": [
-      "itch.io - Indie game marketplace",
-      "How to Scope a Game Project (GDC Talk)",
-      "Your First Game Jam (Extra Credits YouTube)"
-    ]
-  },
-  "mobile-development/Choose a Platform": {
-    "roadmapDetails": "Decide if you want to build for a specific platform or for both. For native iOS, you'll use Swift and Xcode. For native Android, you'll use Kotlin and Android Studio. For cross-platform, React Native (JavaScript/React) and Flutter (Dart) are the top choices. Cross-platform is often faster, but native can provide better performance and platform integration.",
-    "resources": [
-      "Apple Developer - Swift",
-      "Android Developer - Kotlin",
-      "React Native Official Docs",
-      "Flutter Official Docs"
-    ]
-  },
-  "mobile-development/UI/UX for Mobile": {
-    "roadmapDetails": "Designing for mobile is different from the web. You have a smaller screen, and touch is the primary input. Learn Apple's Human Interface Guidelines (for iOS) and Google's Material Design (for Android). Understand mobile navigation patterns like tab bars and navigation drawers. Your design must be intuitive and easy to use with one hand.",
-    "resources": [
-      "Apple's Human Interface Guidelines",
-      "Google's Material Design",
-      "pttrns.com - Mobile design patterns",
-      "Mobbin - A library of mobile app screenshots"
-    ]
-  },
-  "mobile-development/Networking & Data": {
-    "roadmapDetails": "Most apps need to get data from the internet. Learn how to make network requests to REST APIs to fetch data. Then, learn how to store that data on the device so the app works offline. Options include local databases like SQLite or Realm, or simple key-value storage.",
-    "resources": [
-      "Using REST APIs in your Mobile App",
-      "Android Room for local database",
-      "iOS Core Data",
-      "Firebase for backend and data storage"
-    ]
-  },
-  "mobile-development/Platform-specific APIs": {
-    "roadmapDetails": "Mobile apps can do more than websites. Learn how to access device hardware and platform services. This includes using the camera, getting the user's GPS location, sending push notifications, and integrating with health data or payment systems. This is where native or cross-platform apps truly shine.",
-    "resources": [
-      "iOS AVFoundation for Camera/Audio",
-      "Android CameraX",
-      "Firebase Cloud Messaging for push notifications",
-      "Integrating with HealthKit on iOS"
-    ]
-  },
-  "mobile-development/Publish to App Store": {
-    "roadmapDetails": "Getting your app into the hands of users is the final step. Learn the process for each store. For Apple's App Store, you'll need a paid developer account and to go through a review process. For Google's Play Store, the process is generally faster. Prepare your store listing with screenshots, descriptions, and privacy policies.",
-    "resources": [
-      "Apple App Store Review Guidelines",
-      "Google Play Console Help",
-      "Fastlane - Automate screenshots and deployments"
-    ]
-  }
+    "frontend-development/Learn HTML/CSS": {
+        "roadmapDetails": "To learn HTML/CSS, start with the basic structure: `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`. Understand tags like `<h1>` to `<h6>` for headings, `<p>` for paragraphs, and `<a>` for links. For CSS, learn selectors, properties, and the box model. Practice with responsive design using Flexbox and Grid. A key challenge is understanding specificity and the cascade.",
+        "resources": [
+            "MDN Web Docs: HTML",
+            "MDN Web Docs: CSS",
+            "freeCodeCamp: Responsive Web Design",
+            "Book: HTML and CSS: Design and Build Websites by Jon Duckett"
+        ]
+    },
+    "frontend-development/Learn JavaScript": {
+        "roadmapDetails": "JavaScript brings your website to life. Start with the basics: variables, data types, and control flow. Progress to functions, objects, and arrays. A crucial concept to master is the Document Object Model (DOM) for manipulating HTML elements. Then, move on to asynchronous JavaScript (Promises, async/await). A common hurdle is understanding scope and closures.",
+        "resources": [
+            "MDN Web Docs: JavaScript",
+            "The Modern JavaScript Tutorial (javascript.info)",
+            "Eloquent JavaScript by Marijn Haverbeke",
+            "freeCodeCamp: JavaScript Algorithms and Data Structures"
+        ]
+    },
+    "frontend-development/Pick a framework": {
+        "roadmapDetails": "Frameworks provide structure for large applications. React, Vue, and Angular are the most popular choices. Pick one and learn its core concepts: components, state management, and routing. For React, understand JSX, props, state, and hooks. The challenge lies in thinking in components and managing application state effectively.",
+        "resources": [
+            "React Official Docs",
+            "Vue.js Official Docs",
+            "Angular Official Docs",
+            "The Net Ninja - React Tutorial (YouTube)"
+        ]
+    },
+    "frontend-development/Build projects": {
+        "roadmapDetails": "Theory is good, but practice is better. Build several projects of increasing complexity, such as a to-do list, a weather app, or a simple e-commerce site. This will solidify your knowledge and give you a portfolio to show potential employers.",
+        "resources": [
+            "Frontend Mentor - Challenges to build real projects",
+            "Dev.to community for project ideas",
+            "Codepen for inspiration and small projects",
+            "GitHub for hosting your portfolio"
+        ]
+    },
+    "frontend-development/Learn version control": {
+        "roadmapDetails": "Version control is essential for any developer. Learn to use Git for tracking changes in your code. Understand basic commands like `git add`, `git commit`, `git push`, and `git pull`. Learn how to work with branches and resolve merge conflicts. Use a platform like GitHub to host your repositories.",
+        "resources": [
+            "Git Handbook",
+            "GitHub Guides",
+            "Learn Git Branching (Interactive Tutorial)",
+            "Pro Git book by Scott Chacon and Ben Straub"
+        ]
+    },
+    "backend-development/Learn a backend language": {
+        "roadmapDetails": "The first step in backend is choosing a programming language. Node.js (with JavaScript/TypeScript) is great for full-stack development. Python (with Django/Flask) is popular for its simplicity and data science capabilities. Go is known for high performance. Choose one that interests you and focus on learning its syntax, standard library, and ecosystem.",
+        "resources": [
+            "Node.js Official Docs",
+            "The Python Tutorial",
+            "A Tour of Go",
+            "Book: Automate the Boring Stuff with Python by Al Sweigart"
+        ]
+    },
+    "backend-development/Master database concepts": {
+        "roadmapDetails": "Data is the heart of most applications. Learn about the two main types of databases: SQL (relational) like PostgreSQL or MySQL, and NoSQL (non-relational) like MongoDB or Redis. Understand how to design a database schema, write queries to create, read, update, and delete (CRUD) data. Grasp the concepts of normalization for SQL and data modeling for NoSQL.",
+        "resources": [
+            "PostgreSQL Tutorial",
+            "MongoDB University",
+            "SQLBolt - Interactive SQL Tutorial",
+            "Book: Designing Data-Intensive Applications by Martin Kleppmann"
+        ]
+    },
+    "backend-development/Understand RESTful APIs": {
+        "roadmapDetails": "APIs (Application Programming Interfaces) allow your frontend to communicate with your backend. Learn about REST principles and how to create endpoints for different resources using HTTP methods (GET, POST, PUT, DELETE). Practice building a complete CRUD API for a simple application like a blog.",
+        "resources": [
+            "MDN Web Docs: Introduction to REST",
+            "Postman - API Client for testing",
+            "Building a RESTful API with Node.js and Express",
+            "Swagger for API documentation"
+        ]
+    },
+    "backend-development/Learn authentication": {
+        "roadmapDetails": "Securing your application is critical. Learn how to implement user authentication and authorization. Understand different strategies like session-based authentication (cookies) and token-based authentication (JWT - JSON Web Tokens). Implement password hashing and secure API key management.",
+        "resources": [
+            "OWASP Top 10 Security Risks",
+            "JWT.io",
+            "Auth0 Docs on Authentication",
+            "The Web Developer's Guide to Crypto"
+        ]
+    },
+    "backend-development/Build full CRUD applications": {
+        "roadmapDetails": "Apply your knowledge by building complete applications that can Create, Read, Update, and Delete data. Examples include a blog platform, a project management tool, or a simple social media site. This will help you understand the full lifecycle of a web application and how different parts work together.",
+        "resources": [
+            "Build a Node.js API - freeCodeCamp",
+            "Django for Everybody - University of Michigan (Coursera)",
+            "Full-stack project ideas on GitHub",
+            "The Odin Project - Full Stack JavaScript"
+        ]
+    },
+    "full-stack-development/Start with frontend basics": {
+        "roadmapDetails": "Begin your full-stack journey by building a strong foundation in frontend technologies. This includes mastering HTML for structure, CSS for styling, and JavaScript for interactivity. A solid understanding of these core technologies is essential before moving on to more complex topics.",
+        "resources": [
+            "MDN Web Docs",
+            "freeCodeCamp: Responsive Web Design",
+            "The Odin Project - Foundations",
+            "JavaScript.info"
+        ]
+    },
+    "full-stack-development/Learn backend fundamentals": {
+        "roadmapDetails": "Once you're comfortable with the frontend, dive into backend development. Choose a language and framework (e.g., Node.js with Express, or Python with Django), and learn about servers, databases (SQL and NoSQL), and how to build APIs to handle data.",
+        "resources": [
+            "Node.js & Express.js - Full Course",
+            "The Python Tutorial",
+            "Django Girls Tutorial",
+            "MongoDB University"
+        ]
+    },
+    "full-stack-development/Master one full stack": {
+        "roadmapDetails": "Specialize in one full-stack technology set to become highly proficient. The MERN stack (MongoDB, Express.js, React, Node.js) is a popular choice due to its use of JavaScript across the entire stack. Learn how each component works together to create a seamless application.",
+        "resources": [
+            "MERN Stack - The Complete Guide (Udemy)",
+            "Full-Stack Open (University of Helsinki)",
+            "Building a MERN Stack App (YouTube)",
+            "Official documentation for MongoDB, Express, React, and Node"
+        ]
+    },
+    "full-stack-development/Build complete applications": {
+        "roadmapDetails": "The best way to solidify your full-stack skills is by building complete applications from scratch. Create 3-5 projects for your portfolio, such as a social media platform, an e-commerce site, or a real-time chat application. This will demonstrate your ability to handle both frontend and backend development.",
+        "resources": [
+            "Project ideas on GitHub",
+            "Build a full-stack app with React and Firebase",
+            "Create a clone of a popular website (e.g., Twitter, Instagram)",
+            "Deploy your applications using Vercel or Heroku"
+        ]
+    },
+    "full-stack-development/Learn deployment and DevOps basics": {
+        "roadmapDetails": "Understand how to get your application from your local machine to the internet. Learn about different hosting platforms (like Vercel, Netlify, or AWS), and get familiar with basic DevOps concepts like CI/CD (Continuous Integration/Continuous Deployment) to automate your deployment process.",
+        "resources": [
+            "Vercel Documentation",
+            "Netlify Documentation",
+
+            "Introduction to CI/CD with GitHub Actions",
+            "Docker for Beginners"
+        ]
+    },
+    "mobile-app-development/Choose a path": {
+        "roadmapDetails": "Decide if you want to build for a specific platform or for both. For native iOS, you'll use Swift and Xcode. For native Android, you'll use Kotlin and Android Studio. For cross-platform, React Native (JavaScript/React) and Flutter (Dart) are the top choices. Cross-platform is often faster, but native can provide better performance and platform integration.",
+        "resources": [
+            "Native vs. Cross-Platform App Development (article)",
+            "Flutter vs. React Native: A Developer's Perspective",
+            "Apple Developer Program",
+            "Android Developer"
+        ]
+    },
+    "mobile-app-development/Learn the language": {
+        "roadmapDetails": "Master the programming language required for your chosen path. For Flutter, learn Dart. For native iOS, learn Swift. For native Android, learn Kotlin. A strong understanding of the language is crucial for building robust and efficient mobile applications.",
+        "resources": [
+            "The Dart Programming Language",
+            "The Swift Programming Language",
+            "Kotlin for Android",
+            "100 Days of Swift (Hacking with Swift)"
+        ]
+    },
+    "mobile-app-development/Build user interfaces": {
+        "roadmapDetails": "Learn how to create responsive and visually appealing user interfaces for mobile devices. For Flutter, you'll use widgets. For Swift, you'll use SwiftUI. For Android, you'll use Jetpack Compose. Focus on creating layouts that look great on various screen sizes.",
+        "resources": [
+            "Flutter Layout basics",
+            "SwiftUI Essentials",
+            "Jetpack Compose Tutorial",
+            "Material Design for mobile"
+        ]
+    },
+    "mobile-app-development/Handle data and networking": {
+        "roadmapDetails": "Most apps need to get data from the internet. Learn how to make network requests to REST APIs to fetch data. Then, learn how to store that data on the device so the app works offline. Options include local databases like SQLite or Realm, or simple key-value storage.",
+        "resources": [
+            "Networking with Flutter",
+            "Fetching data in SwiftUI",
+            "Networking in Android with Retrofit",
+            "Firebase for Mobile Apps"
+        ]
+    },
+    "mobile-app-development/Deploy to app stores": {
+        "roadmapDetails": "Getting your app into the hands of users is the final step. Learn the process for each store. For Apple's App Store, you'll need a paid developer account and to go through a review process. For Google's Play Store, the process is generally faster. Prepare your store listing with screenshots, descriptions, and privacy policies.",
+        "resources": [
+            "Apple App Store Review Guidelines",
+            "Google Play Console Help",
+            "Fastlane - Automate screenshots and deployments",
+            "Submitting Your App to the App Store (Ray Wenderlich)"
+        ]
+    },
+    "game-development/Learn a game engine": {
+        "roadmapDetails": "A game engine provides the core functionality you need to make a game. Unity (using C#) is very popular, especially for indie and mobile games, and has a vast amount of learning resources. Unreal Engine (using C++ and Blueprints) is known for high-end graphics. Godot is a rising open-source alternative. Pick one and stick with it for your first few projects.",
+        "resources": [
+            "Unity Learn",
+            "Unreal Engine Online Learning",
+            "Godot Docs",
+            "Which Game Engine is Right for You? (YouTube)"
+        ]
+    },
+    "game-development/Master programming": {
+        "roadmapDetails": "No matter the engine, you need strong programming skills. If you chose Unity, learn C#. If you chose Unreal, learn C++. Focus on core concepts like variables, loops, functions, and object-oriented programming. Game development will push your programming skills with concepts like game loops, state management, and performance optimization.",
+        "resources": [
+            "Microsoft C# Docs",
+            "learncpp.com",
+
+            "Book: The C# Player's Guide",
+            "Game Programming Patterns by Robert Nystrom"
+        ]
+    },
+    "game-development/Study game design": {
+        "roadmapDetails": "Programming skills build the game, but design skills make it fun. Learn about core game loops, player motivation, level design, and difficulty curves. Understand how to give clear player feedback. Start by analyzing your favorite games to see how they apply these principles.",
+        "resources": [
+            "Game Maker's Toolkit (YouTube channel)",
+            "GDC (Game Developers Conference) Vault (YouTube)",
+            "Book: The Art of Game Design: A Book of Lenses by Jesse Schell",
+            "Extra Credits (YouTube channel)"
+        ]
+    },
+    "game-development/Build small games": {
+        "roadmapDetails": "The most important step is to finish a project. Start very small. Recreate a classic like Pong or Pac-Man. The process of taking a game from idea to a finished, playable state (even if simple) is the best way to learn. This will build your portfolio and confidence.",
+        "resources": [
+            "Build a simple game in Unity (tutorial)",
+            "Your First Game in Unreal Engine (tutorial)",
+            "Classic game remake ideas",
+            "itch.io for hosting and sharing your games"
+        ]
+    },
+    "game-development/Participate in game jams": {
+        "roadmapDetails": "Game jams are events where developers create a game from scratch in a short amount of time (usually 48-72 hours). This is an excellent way to practice your skills, learn to work in a team, and finish a project. It's a great addition to your portfolio and a fun way to connect with other developers.",
+        "resources": [
+            "itch.io Game Jams",
+            "Global Game Jam",
+            "Ludum Dare",
+            "Tips for a successful game jam"
+        ]
+    },
+    "api-development-integration/Master REST principles": {
+        "roadmapDetails": "Learn the fundamental principles of Representational State Transfer (REST), the architectural style that governs the web. Understand concepts like resources, URIs, statelessness, and the use of HTTP methods (GET, POST, PUT, DELETE). This is the foundation for building web APIs.",
+        "resources": [
+            "Understanding REST APIs (article)",
+            "Richardson Maturity Model",
+            "MDN Web Docs: An overview of HTTP",
+            "Book: RESTful Web APIs by Leonard Richardson"
+        ]
+
+    },
+    "api-development-integration/Learn API authentication": {
+        "roadmapDetails": "Secure your APIs by learning different authentication and authorization methods. Understand basic authentication, API keys, and more advanced protocols like OAuth 2.0 and OpenID Connect. Learn how to use JSON Web Tokens (JWT) for stateless authentication.",
+        "resources": [
+            "OAuth 2.0 Simplified",
+            "Introduction to JSON Web Tokens (JWT)",
+            "Auth0 Developer Resources",
+            "OWASP API Security Top 10"
+        ]
+    },
+    "api-development-integration/Study API design best practices": {
+        "roadmapDetails": "Learn how to design APIs that are easy for other developers to use and understand. This includes consistent naming conventions, proper use of HTTP status codes, versioning strategies, and providing clear error messages. Good API design is crucial for adoption and maintainability.",
+        "resources": [
+            "Microsoft REST API Guidelines",
+            "Google Cloud API Design Guide",
+            "Best Practices for REST API Design (article)",
+            "API Stylebook"
+        ]
+    },
+    "api-development-integration/Build and document APIs": {
+        "roadmapDetails": "Apply your knowledge by building several APIs. Start with a simple CRUD API and move to more complex examples. Use tools like Postman to test your APIs. Crucially, learn to document your APIs using a standard like the OpenAPI Specification (formerly Swagger) to make them easily consumable by others.",
+        "resources": [
+            "Build a REST API with Node.js and Express",
+            "Postman Learning Center",
+            "OpenAPI Specification",
+            "Swagger Tools"
+        ]
+    },
+    "api-development-integration/Learn GraphQL": {
+        "roadmapDetails": "Explore GraphQL as a modern alternative to REST. Understand how GraphQL allows clients to request exactly the data they need, reducing over-fetching and under-fetching. Learn about schemas, queries, mutations, and subscriptions. This is a valuable skill for building flexible and efficient APIs.",
+        "resources": [
+            "Introduction to GraphQL",
+            "How to GraphQL",
+            "Apollo GraphQL Platform",
+            "Building a GraphQL server with Node.js"
+        ]
+    },
+    "data-science/Learn Python": {
+        "roadmapDetails": "Python is the lingua franca of data science. Master the basics of the language and then dive into the key libraries for data science: NumPy for numerical operations, Pandas for data manipulation and analysis, and Matplotlib/Seaborn for data visualization.",
+        "resources": [
+            "Codecademy: Learn Python 3",
+            "Book: Python for Data Analysis by Wes McKinney",
+            "Kaggle: Intro to Programming",
+            "Dataquest: Python for Data Science"
+        ]
+    },
+    "data-science/Master statistics and probability": {
+        "roadmapDetails": "Data science is built on a foundation of statistics and probability. You need to understand concepts like descriptive statistics, probability distributions, hypothesis testing, and regression. These concepts allow you to make inferences and predictions from data.",
+        "resources": [
+            "Khan Academy: Statistics and probability",
+            "StatQuest with Josh Starmer (YouTube)",
+            "Book: Practical Statistics for Data Scientists by Peter Bruce & Andrew Bruce",
+            "Seeing Theory (interactive visualization of stats)"
+        ]
+    },
+    "data-science/Study machine learning algorithms": {
+        "roadmapDetails": "Start with the fundamentals of machine learning. Learn the difference between supervised learning (e.g., regression, classification) and unsupervised learning (e.g., clustering). Implement basic algorithms like Linear Regression, Logistic Regression, and K-Means Clustering using Scikit-learn.",
+        "resources": [
+            "Google's Machine Learning Crash Course",
+            "Coursera: Machine Learning by Andrew Ng",
+            "Scikit-learn Official Tutorials",
+            "Book: Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow"
+        ]
+    },
+    "data-science/Learn data manipulation": {
+        "roadmapDetails": "Raw data is often messy. Data wrangling (or cleaning) is a critical skill. Become proficient with Pandas for cleaning, transforming, and reshaping data. Also, master SQL for extracting and manipulating data from relational databases, as this is a common task for data scientists.",
+        "resources": [
+            "Pandas Official Documentation",
+            "Kaggle: Data Cleaning course",
+            "SQLBolt - Interactive SQL Tutorial",
+            "LeetCode for SQL practice problems"
+        ]
+    },
+    "data-science/Complete data projects": {
+        "roadmapDetails": "Apply your skills to real-world datasets. Find interesting datasets on platforms like Kaggle, UCI Machine Learning Repository, or data.gov. Work through the entire data science pipeline: data cleaning, exploration, modeling, and communication of results. Document your projects in a portfolio to showcase your abilities.",
+        "resources": [
+            "Kaggle Datasets",
+            "FiveThirtyEight Data",
+            "How to Build a Data Science Portfolio by Dataquest",
+            "GitHub for hosting your project code and notebooks"
+        ]
+    },
+    "machine-learning-engineer/Build a strong foundation": {
+        "roadmapDetails": "A strong foundation in Python programming and mathematics is non-negotiable. Ensure you are comfortable with data structures, algorithms, and object-oriented programming in Python. For math, focus on linear algebra, calculus, and probability.",
+        "resources": [
+            "3Blue1Brown: Essence of linear algebra (YouTube)",
+            "Khan Academy: Multivariable calculus",
+            "Python for Data Science Handbook",
+            "LeetCode for programming practice"
+        ]
+    },
+    "machine-learning-engineer/Learn classical ML algorithms": {
+        "roadmapDetails": "Before diving into deep learning, it's crucial to understand traditional machine learning algorithms. Study concepts like regression, classification, clustering, and dimensionality reduction. Become proficient with the Scikit-learn library to implement these models.",
+        "resources": [
+            "Scikit-learn User Guide",
+            "Coursera: Machine Learning by Andrew Ng",
+            "Book: An Introduction to Statistical Learning",
+            "Kaggle competitions"
+        ]
+    },
+    "machine-learning-engineer/Study deep learning": {
+        "roadmapDetails": "Dive into the world of neural networks. Learn about the architecture of deep neural networks, activation functions, backpropagation, and different types of layers (dense, convolutional, recurrent). This is the core of modern AI and machine learning.",
+        "resources": [
+            "DeepLearning.AI - Specializations on Coursera",
+            "fast.ai - Practical Deep Learning for Coders",
+            "3Blue1Brown: Neural Networks (YouTube)",
+            "Book: Deep Learning with Python by François Chollet"
+        ]
+    },
+    "machine-learning-engineer/Master ML frameworks": {
+        "roadmapDetails": "Become an expert in a major deep learning framework. TensorFlow and PyTorch are the two industry leaders. Pick one and learn it deeply. Understand how to build, train, and debug models, and how to use tools like TensorBoard for visualization.",
+        "resources": [
+            "PyTorch Official Tutorials",
+            "TensorFlow Core Tutorials",
+            "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow (book)",
+            "Official documentation and examples"
+        ]
+    },
+    "machine-learning-engineer/Learn MLOps and deployment": {
+        "roadmapDetails": "A model is only useful if it can be used in an application. Learn how to take a trained model and deploy it as an API (using Flask or FastAPI), package it with Docker, and manage its lifecycle. Understand MLOps principles for versioning, monitoring, and retraining models in production.",
+        "resources": [
+            "MLOps Community",
+            "Full Stack Deep Learning course",
+            "Deploying Machine Learning Models (paperspace.com blog)",
+            "Kubeflow and MLflow for MLOps"
+        ]
+    },
+    "business-intelligence-analyst/Master SQL": {
+        "roadmapDetails": "SQL (Structured Query Language) is the most critical skill for a BI analyst. You will use it daily to extract, manipulate, and analyze data from databases. Become proficient in writing complex queries, including joins, subqueries, and window functions.",
+        "resources": [
+            "SQLBolt - Interactive SQL Tutorial",
+            "LeetCode SQL problems",
+            "Mode Analytics SQL Tutorial",
+            "Book: T-SQL Fundamentals by Itzik Ben-Gan"
+        ]
+    },
+    "business-intelligence-analyst/Learn a BI tool": {
+        "roadmapDetails": "Master a major business intelligence tool for data visualization and dashboarding. Tableau and Microsoft Power BI are the two most popular tools in the industry. Choose one and learn how to connect to data sources, create charts and graphs, and build interactive dashboards.",
+        "resources": [
+            "Microsoft Power BI Guided Learning",
+            "Tableau Training Videos",
+            "Maven Analytics courses",
+            "YouTube tutorials for specific dashboard projects"
+        ]
+    },
+    "business-intelligence-analyst/Understand business metrics": {
+        "roadmapDetails": "A BI analyst needs to understand the business. Learn about common business metrics and Key Performance Indicators (KPIs) in areas like marketing, sales, and finance. Understanding what the business wants to measure is key to creating useful reports and dashboards.",
+        "resources": [
+            "KPI Library",
+            "Articles on business metrics from Harvard Business Review",
+            "Investopedia for financial terms",
+            "Talk to business professionals in different fields"
+        ]
+    },
+    "business-intelligence-analyst/Learn data modeling": {
+        "roadmapDetails": "Understand how to structure data for effective analysis. Learn about dimensional modeling, star schemas, and snowflake schemas. This knowledge is crucial for building efficient data models in BI tools and for working with data warehouses.",
+        "resources": [
+            "The Data Warehouse Toolkit by Ralph Kimball (book)",
+            "Introduction to Data Modeling for Power BI",
+            "Star Schema vs. Snowflake Schema (article)",
+            "Kimball Group articles"
+        ]
+    },
+    "business-intelligence-analyst/Create dashboard projects": {
+        "roadmapDetails": "The best way to learn is by doing. Find public datasets and create 5-10 comprehensive dashboards for your portfolio. This will not only sharpen your technical skills but also demonstrate your ability to turn data into insights. Explain your design choices and the story your dashboard tells.",
+        "resources": [
+            "Kaggle Datasets",
+            "Makeover Monday community project",
+            "Workout Wednesday challenges",
+            "Build a portfolio website to showcase your work"
+        ]
+    },
+    "data-engineering/Learn SQL and databases": {
+        "roadmapDetails": "A strong foundation in SQL and database fundamentals is essential. You should be an expert in SQL, and understand the difference between relational (like PostgreSQL) and non-relational (like MongoDB) databases, and when to use each.",
+        "resources": [
+            "PostgreSQL Tutorial",
+            "MongoDB University",
+            "Advanced SQL queries practice",
+            "Book: Designing Data-Intensive Applications by Martin Kleppmann"
+        ]
+    },
+    "data-engineering/Master Python for data processing": {
+        "roadmapDetails": "Python is the primary language for data engineering. Master Python programming, and become proficient in libraries like Pandas for data manipulation. You will use Python to write ETL scripts and build data pipelines.",
+        "resources": [
+            "Python for Data Engineering (course)",
+            "Book: Fluent Python by Luciano Ramalho",
+            "Practice Python problems on HackerRank or LeetCode",
+            "Build small automation scripts with Python"
+        ]
+    },
+    "data-engineering/Study ETL concepts": {
+        "roadmapDetails": "Understand the process of Extract, Transform, Load (ETL). Learn how to build data pipelines that extract data from various sources, transform it into a usable format, and load it into a data warehouse or data lake. Study tools like Apache Airflow for orchestrating these pipelines.",
+        "resources": [
+            "Fundamentals of Data Engineering (book)",
+            "Apache Airflow Documentation",
+
+            "dbt (data build tool) for transformations",
+            "Building your first ETL pipeline (tutorial)"
+        ]
+    },
+    "data-engineering/Learn Apache Spark": {
+        "roadmapDetails": "Apache Spark is the leading framework for large-scale data processing. Learn the Spark architecture and how to use it for batch and stream processing. Practice writing Spark applications in Python (PySpark) or Scala.",
+        "resources": [
+            "Spark: The Definitive Guide (book)",
+            "Databricks Community Edition for hands-on practice",
+            "Introduction to PySpark (course)",
+            "Apache Spark examples on GitHub"
+        ]
+    },
+    "data-engineering/Understand data warehousing": {
+        "roadmapDetails": "Learn the principles of data warehousing and data lakes. Understand concepts like dimensional modeling, star schemas, and how to design and manage a data warehouse. Get familiar with cloud data warehouse solutions like Amazon Redshift, Google BigQuery, or Snowflake.",
+        "resources": [
+            "The Data Warehouse Toolkit by Ralph Kimball (book)",
+            "Introduction to Amazon Redshift",
+            "Google BigQuery documentation",
+            "Snowflake University"
+        ]
+    },
+    "cloud-engineering/Choose a cloud platform": {
+        "roadmapDetails": "The big three cloud providers are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). While concepts are similar across platforms, they have different services and interfaces. It's recommended to pick one to specialize in initially. AWS is the market leader and has the most resources available for learning.",
+        "resources": [
+            "AWS vs. Azure vs. Google Cloud: What's the best cloud platform",
+            "A Cloud Guru - Training Platform",
+            "freeCodeCamp AWS Course",
+            "Official documentation of the chosen platform"
+        ]
+    },
+    "cloud-engineering/Get a foundational certification": {
+        "roadmapDetails": "Earn a foundational certification to validate your basic knowledge of your chosen cloud platform. For AWS, this is the Certified Cloud Practitioner. For Azure, it's the AZ-900: Azure Fundamentals. This will give you a structured learning path and a valuable credential.",
+        "resources": [
+            "AWS Certified Cloud Practitioner Official Guide",
+            "Microsoft Azure Fundamentals (AZ-900) learning path",
+            "Google Cloud Digital Leader",
+            "Practice exams on Udemy or Whizlabs"
+        ]
+    },
+    "cloud-engineering/Learn core services": {
+        "roadmapDetails": "Every cloud platform has core services for compute, storage, and networking. For compute, learn about virtual machines (EC2 on AWS, VMs on Azure). For storage, understand object storage (S3, Blob Storage) and block storage. For networking, learn about Virtual Private Clouds (VPC), subnets, and security groups.",
+        "resources": [
+            "AWS Core Services Overview",
+            "Introduction to Azure core services",
+            "Google Cloud's core infrastructure",
+            "Hands-on labs provided by the cloud platforms"
+        ]
+    },
+    "cloud-engineering/Master Infrastructure as Code": {
+        "roadmapDetails": "Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through code. Terraform is the industry standard for this. Learn how to write Terraform configurations to define your cloud resources (servers, databases, networks) in a declarative way. This makes your infrastructure repeatable and versionable.",
+        "resources": [
+            "Terraform Official Docs - Get Started",
+            "HashiCorp Learn",
+            "Book: Terraform: Up & Running by Yevgeniy Brikman",
+            "YouTube: Terraform Explained in 15 Mins"
+        ]
+    },
+    "cloud-engineering/Get an associate-level certification": {
+        "roadmapDetails": "After gaining hands-on experience, aim for an associate-level certification. For AWS, this would be the Solutions Architect - Associate or Developer - Associate. For Azure, it's the Azure Administrator Associate (AZ-104). This demonstrates a deeper level of expertise and is highly valued by employers.",
+        "resources": [
+            "AWS Certified Solutions Architect - Associate Official Study Guide",
+            "Microsoft Certified: Azure Administrator Associate learning paths",
+            "Stephane Maarek's courses on Udemy",
+            "Jon Bonso's practice exams"
+        ]
+    },
+    "devops-engineering/Learn Linux fundamentals": {
+        "roadmapDetails": "Most servers in the world run on Linux, so you must be comfortable with the command line. Learn about the file system, permissions, process management, and basic shell scripting. This is a non-negotiable foundation for any DevOps engineer.",
+        "resources": [
+            "linuxjourney.com",
+            "Book: The Linux Command Line by William Shotts",
+            "OverTheWire: Bandit Wargame to practice Linux skills",
+            "Ryan's Tutorials for Linux"
+        ]
+    },
+    "devops-engineering/Master Git and version control": {
+        "roadmapDetails": "DevOps is all about managing code and configurations, so you must be an expert in Git. Go beyond the basic commands and learn about branching strategies (like Git Flow), rebasing, and resolving complex merge conflicts. Understand how Git is used in a team environment.",
+        "resources": [
+            "Pro Git book (official Git book)",
+            "Learn Git Branching (interactive tutorial)",
+            "GitHub Guides",
+            "Atlassian Git Tutorial"
+        ]
+    },
+    "devops-engineering/Learn scripting": {
+        "roadmapDetails": "Automation is at the core of DevOps. A scripting language is your primary tool for this. Bash is essential for interacting with the Linux command line. Python is incredibly versatile for writing more complex scripts, interacting with APIs, and automating tasks. Master one to automate repetitive tasks.",
+        "resources": [
+            "The Bash Guide",
+            "Google's Python Class",
+            "Automate the Boring Stuff with Python (book)",
+            "HackerRank for scripting practice"
+        ]
+    },
+    "devops-engineering/Study CI/CD concepts": {
+        "roadmapDetails": "Continuous Integration (CI) and Continuous Deployment (CD) automate the process of building, testing, and deploying your code. Learn to use tools like GitHub Actions, Jenkins, or GitLab CI. Understand how to create a pipeline that automatically runs tests when code is pushed, builds an artifact (like a Docker image), and deploys it to a server.",
+        "resources": [
+            "GitHub Actions Documentation",
+            "Jenkins User Documentation",
+            "GitLab CI/CD Documentation",
+            "The Phoenix Project (a novel about DevOps)"
+        ]
+    },
+    "devops-engineering/Master Docker and Kubernetes": {
+        "roadmapDetails": "While Docker helps you run one container, Kubernetes helps you run and manage thousands of them. It's the de-facto standard for container orchestration. Learn its core concepts: Pods, Services, Deployments, and ReplicaSets. This is a complex but essential tool for modern infrastructure.",
+        "resources": [
+            "Docker Official Docs - Get Started",
+            "Kubernetes Official Docs",
+            "killer.sh - CKA/CKAD/CKS Exam Simulator",
+            "Book: Kubernetes in Action by Marko Lukša"
+        ]
+    },
+    "network-engineering/Learn networking fundamentals": {
+        "roadmapDetails": "Start with the basics of how computer networks work. Study the OSI and TCP/IP models, understand IP addressing (IPv4 and IPv6), subnetting, and common protocols like DNS, DHCP, and HTTP. This is the foundation for everything else in networking.",
+        "resources": [
+            "Professor Messer's Network+ Training Course (YouTube)",
+            "CompTIA Network+ Study Guide",
+            "Cisco Networking Academy",
+            "An Introduction to Computer Networks by Beej's Guide"
+        ]
+    },
+    "network-engineering/Get CCNA certification": {
+        "roadmapDetails": "The Cisco Certified Network Associate (CCNA) is the industry-standard certification for entry-level network engineers. The curriculum covers a broad range of networking topics and will give you a solid theoretical and practical foundation. Preparing for and passing the CCNA is a major step in your career.",
+        "resources": [
+            "Cisco CCNA Official Cert Guide",
+            "Jeremy's IT Lab (free CCNA course on YouTube)",
+            "Boson NetSim for CCNA (practice labs)",
+            "CCNA practice exams"
+        ]
+    },
+    "network-engineering/Practice with network simulators": {
+        "roadmapDetails": "Hands-on experience is crucial. Since physical equipment is expensive, use network simulators like Cisco Packet Tracer or GNS3 to build and configure virtual networks. This allows you to practice configuring routers, switches, and other network devices in a safe environment.",
+        "resources": [
+            "Cisco Packet Tracer",
+            "GNS3",
+            "EVE-NG",
+            "Packet Tracer labs from various online sources"
+        ]
+    },
+    "network-engineering/Learn network security basics": {
+        "roadmapDetails": "Understand the fundamentals of network security. Learn about firewalls, access control lists (ACLs), VPNs, and intrusion detection/prevention systems (IDS/IPS). A network engineer is often the first line of defense for an organization's security.",
+        "resources": [
+            "Introduction to Network Security (Cybrary)",
+            "Palo Alto Networks learning resources",
+            "Fortinet NSE Training Institute",
+            "OWASP Top 10"
+        ]
+    },
+    "network-engineering/Gain hands-on experience": {
+        "roadmapDetails": "Look for opportunities to work with real networking equipment. This could be through an internship, a home lab with used enterprise gear from eBay, or a junior role like a network technician. There is no substitute for real-world experience in troubleshooting and managing a live network.",
+        "resources": [
+            "Building a home lab (subreddit r/homelab)",
+            "Internship opportunities on LinkedIn or Indeed",
+            "Volunteer for non-profits to manage their network",
+            "Network technician job postings"
+        ]
+    },
+    "database-administration/Master SQL fundamentals": {
+        "roadmapDetails": "As a DBA, you must be an expert in SQL. Go beyond simple SELECT statements and master joins, subqueries, window functions, and stored procedures. You will use SQL daily for querying, managing, and troubleshooting the database.",
+        "resources": [
+            "Advanced SQL course on Udemy or Coursera",
+            "LeetCode Hard SQL problems",
+            "Book: T-SQL Fundamentals by Itzik Ben-Gan",
+            "PostgreSQL or MySQL official documentation"
+        ]
+    },
+    "database-administration/Learn database design": {
+        "roadmapDetails": "Understand the principles of good database design. Learn about normalization (up to 3NF and BCNF) to reduce data redundancy and improve data integrity. Practice designing schemas for various applications.",
+        "resources": [
+            "Database Design course on Coursera",
+            "Book: Database Design for Mere Mortals by Michael J. Hernandez",
+            "Normalization in DBMS (GeeksforGeeks)",
+            "Practice designing databases for sample projects"
+        ]
+    },
+    "database-administration/Study a major RDBMS": {
+        "roadmapDetails": "Choose one major relational database management system (RDBMS) and learn it deeply. PostgreSQL, MySQL, Oracle, and SQL Server are popular choices. Understand its specific architecture, configuration, and administration tools. PostgreSQL is a great open-source option to start with.",
+        "resources": [
+            "PostgreSQL Official Documentation",
+            "MySQL Official Documentation",
+            "Oracle Database Learning Library",
+            "Microsoft SQL Server documentation"
+        ]
+    },
+    "database-administration/Learn backup and recovery": {
+        "roadmapDetails": "One of the most critical responsibilities of a DBA is ensuring that data is not lost. Master the techniques for performing database backups (full, incremental, differential) and, more importantly, practice restoring from those backups. Understand point-in-time recovery.",
+        "resources": [
+            "Backup and Recovery in PostgreSQL",
+            "MySQL Backup and Recovery",
+            "Veeam Community (for backup discussions)",
+            "Simulate disaster recovery scenarios in a lab environment"
+        ]
+    },
+    "database-administration/Understand performance tuning": {
+        "roadmapDetails": "Learn how to diagnose and fix database performance problems. Understand how to read execution plans, create and manage indexes, and optimize slow queries. This is a highly valuable skill that can significantly improve application performance.",
+        "resources": [
+            "Use The Index, Luke! (a guide to database performance for developers)",
+            "PostgreSQL Performance Tuning (book)",
+            "Brent Ozar's blog for SQL Server tuning",
+            "Tools like pg_stat_statements for PostgreSQL"
+        ]
+    },
+    "system-administration/Learn Linux fundamentals": {
+        "roadmapDetails": "A deep understanding of the Linux operating system is crucial for most system administrator roles. Master the command line, learn about file systems, user management, permissions, and process management. Become proficient in a text editor like Vim or Nano.",
+        "resources": [
+            "linuxjourney.com",
+            "Book: The Linux Command Line by William Shotts",
+            "OverTheWire: Bandit Wargame to practice Linux skills",
+            "Get a Raspberry Pi to practice on a real Linux system"
+        ]
+    },
+    "system-administration/Master Windows Server": {
+        "roadmapDetails": "In many corporate environments, Windows Server is prevalent. Learn how to install and configure Windows Server, manage Active Directory for user and group management, and use Group Policy to enforce security settings. Understand roles like DHCP and DNS servers.",
+        "resources": [
+            "Microsoft Learn: Windows Server",
+            "Windows Server Administration for Beginners (YouTube)",
+            "Build a home lab with virtual machines (VirtualBox or VMware)",
+            "Microsoft 365 fundamentals (as it integrates with on-premise)"
+        ]
+    },
+    "system-administration/Learn scripting": {
+        "roadmapDetails": "Automation is key to efficient system administration. For Linux, master Bash scripting. For Windows, master PowerShell. Learn how to write scripts to automate repetitive tasks like creating users, backing up files, and monitoring system health.",
+        "resources": [
+            "The Bash Guide",
+            "PowerShell in a Month of Lunches (book)",
+            "Automate the Boring Stuff with Python (book)",
+            "Practice by writing scripts for common tasks"
+        ]
+    },
+    "system-administration/Understand networking basics": {
+        "roadmapDetails": "System administrators need a solid understanding of networking. You don't need to be a network engineer, but you should understand TCP/IP, IP addressing, DNS, DHCP, and how to troubleshoot basic network connectivity issues.",
+        "resources": [
+            "Professor Messer's Network+ Training Course (YouTube)",
+            "CompTIA Network+ Study Guide",
+            "How DNS Works (comic)",
+            "Basic network troubleshooting commands (ping, tracert, nslookup)"
+        ]
+    },
+    "system-administration/Get certifications": {
+        "roadmapDetails": "Certifications are valuable in system administration. For entry-level, consider CompTIA A+ and Network+. For Linux, the Red Hat Certified System Administrator (RHCSA) is highly respected. For Windows, look into Microsoft's role-based certifications like Azure Administrator Associate.",
+        "resources": [
+            "CompTIA Certifications",
+            "Red Hat Training and Certification",
+            "Microsoft Certifications",
+            "r/sysadmin subreddit for advice"
+        ]
+    },
+    "cybersecurity-specialist/Learn networking and OS": {
+        "roadmapDetails": "A strong foundation in networking and operating systems (both Linux and Windows) is a prerequisite for cybersecurity. You need to understand how they work to know how to defend them. Study TCP/IP, firewalls, and the internals of Linux and Windows.",
+        "resources": [
+            "CompTIA Network+",
+            "CompTIA Security+",
+            "The Linux Command Line (book)",
+            "Windows Internals (book)"
+        ]
+    },
+    "cybersecurity-specialist/Study security principles": {
+        "roadmapDetails": "Learn the core principles of information security, often referred to as the CIA triad: Confidentiality, Integrity, and Availability. Study concepts like access control, risk management, and cryptography.",
+        "resources": [
+            "CISSP Study Guide",
+            "NIST Cybersecurity Framework",
+            "OWASP Top 10",
+            "Cryptography I on Coursera (Stanford)"
+        ]
+    },
+    "cybersecurity-specialist/Learn Linux for security": {
+        "roadmapDetails": "Linux is the operating system of choice for many security professionals. Master the Linux command line and get familiar with security-focused distributions like Kali Linux, which comes pre-loaded with many security tools.",
+        "resources": [
+            "Kali Linux Revealed (free official book)",
+            "TryHackMe and Hack The Box for hands-on practice",
+            "The Cyber Mentor's courses",
+            "SANS Institute resources"
+        ]
+    },
+    "cybersecurity-specialist/Practice with security tools": {
+        "roadmapDetails": "Become proficient with the tools of the trade. Learn to use Wireshark for packet analysis, Nmap for network scanning, Metasploit for exploitation, and a SIEM (Security Information and Event Management) tool like Splunk or ELK Stack for log analysis.",
+        "resources": [
+            "Wireshark University",
+            "Nmap Official Documentation",
+            "Metasploit Unleashed (free course)",
+            "Splunk Fundamentals 1 (free course)"
+        ]
+    },
+    "cybersecurity-specialist/Get certifications": {
+        "roadmapDetails": "Certifications are highly valued in cybersecurity. Start with CompTIA Security+. Then, consider more specialized or advanced certifications like Certified Ethical Hacker (CEH), OSCP (for penetration testing), or CySA+ (for security analysis).",
+        "resources": [
+            "CompTIA Security+ (SY0-601)",
+            "EC-Council Certified Ethical Hacker (CEH)",
+            "Offensive Security Certified Professional (OSCP)",
+            "CompTIA Cybersecurity Analyst (CySA+)"
+        ]
+    },
+    "penetration-testing/Master networking and Linux": {
+        "roadmapDetails": "To break into networks, you must first understand them deeply. Build a very strong foundation in TCP/IP networking, subnetting, and routing. Become an expert in the Linux command line, as it will be your primary environment.",
+        "resources": [
+            "TCP/IP Illustrated, Vol. 1 (book)",
+            "Wireshark 101",
+            "The Linux Command Line (book)",
+            "Hack The Box and TryHackMe labs"
+        ]
+    },
+    "penetration-testing/Learn web application vulnerabilities": {
+        "roadmapDetails": "Many penetration tests target web applications. Study the OWASP Top 10 vulnerabilities in depth. Learn about SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and other common web-based attacks.",
+        "resources": [
+            "OWASP Top 10 Project",
+            "PortSwigger Web Security Academy",
+            "The Web Application Hacker's Handbook (book)",
+            "bWAPP (a deliberately insecure web app for practice)"
+        ]
+    },
+    "penetration-testing/Practice with Kali Linux": {
+        "roadmapDetails": "Kali Linux is a distribution packed with penetration testing tools. Become an expert in using these tools. Learn Nmap for scanning, Burp Suite for web app testing, Metasploit for exploitation, and John the Ripper for password cracking.",
+        "resources": [
+            "Kali Linux Revealed (free official book)",
+            "Metasploit Unleashed",
+            "Burp Suite documentation",
+            "Hands-on labs on platforms like TryHackMe"
+        ]
+    },
+    "penetration-testing/Get OSCP certification": {
+        "roadmapDetails": "The Offensive Security Certified Professional (OSCP) is the gold standard for penetration testing certifications. It's a grueling 24-hour practical exam where you must hack into multiple machines. Preparing for and passing the OSCP is a significant achievement and will open many doors.",
+        "resources": [
+            "Offensive Security's Penetration Testing with Kali Linux (PWK) course",
+            "r/oscp subreddit for advice",
+            "TJ Null's list of OSCP-like VMs",
+            "IppSec's YouTube channel (Hack The Box walkthroughs)"
+        ]
+    },
+    "penetration-testing/Participate in bug bounty programs": {
+        "roadmapDetails": "Bug bounty programs (on platforms like HackerOne or Bugcrowd) allow you to legally hack real companies and get paid for the vulnerabilities you find. This is an excellent way to gain real-world experience, build a reputation, and earn money.",
+        "resources": [
+            "HackerOne",
+            "Bugcrowd",
+            "The Bug Hunter's Methodology (by Jason Haddix)",
+            "Intigriti"
+        ]
+    },
+    "quality-assurance/Learn software testing fundamentals": {
+        "roadmapDetails": "Start by understanding the theory of software testing. Learn about the different levels of testing (unit, integration, system, acceptance), types of testing (functional, non-functional, regression), and the software testing life cycle (STLC).",
+        "resources": [
+            "ISTQB Foundation Level Syllabus",
+            "Guru99 Software Testing Tutorial",
+            "Software Testing Help (blog)",
+            "Ministry of Testing (community)"
+        ]
+    },
+    "quality-assurance/Practice manual testing": {
+        "roadmapDetails": "Before you can automate, you must know what to test. Get hands-on experience with manual testing. Learn how to write test cases, execute them, and report bugs effectively. Practice exploratory testing to find issues that test cases might miss.",
+        "resources": [
+            "How to Write Good Test Cases (article)",
+            "uTest (platform for freelance testing)",
+            "Practice testing on websites with known bugs",
+            "Learn to use a bug tracking tool like JIRA"
+        ]
+    },
+    "quality-assurance/Learn a programming language": {
+        "roadmapDetails": "To move into test automation, you need to learn to code. Python and JavaScript are the most popular languages for test automation. Master the fundamentals of one of these languages, including data types, control structures, functions, and object-oriented programming.",
+        "resources": [
+            "Test Automation University",
+            "Python for Everybody (Coursera)",
+            "The Complete JavaScript Course (Udemy)",
+            "freeCodeCamp"
+        ]
+    },
+    "quality-assurance/Master test automation": {
+        "roadmapDetails": "Learn to use a test automation framework to write automated tests. For web applications, Selenium and Cypress are the most popular tools. Learn how to write scripts that interact with a web browser, perform actions, and verify outcomes.",
+        "resources": [
+            "Selenium WebDriver with Python/Java (official docs)",
+            "Cypress.io documentation",
+            "Playwright documentation",
+            "Test Automation University courses"
+        ]
+    },
+    "quality-assurance/Learn API testing": {
+        "roadmapDetails": "Modern applications rely heavily on APIs, so API testing is a critical skill. Learn how to use tools like Postman or Insomnia to send requests to an API and validate the responses. Understand how to test for functionality, performance, and security of an API.",
+        "resources": [
+            "Postman Learning Center",
+            "Introduction to API Testing (article)",
+            "Rest-Assured for API automation in Java",
+            "Karate DSL for API test automation"
+        ]
+    },
+    "ui-ux-design/Learn design principles": {
+        "roadmapDetails": "Before using any tools, you must understand the principles of good design. Study visual design fundamentals like color theory, typography, layout, and composition. Learn about UX principles like user-centered design, feedback, and consistency.",
+        "resources": [
+            "Laws of UX",
+            "Material Design Guidelines",
+            "Book: Don't Make Me Think by Steve Krug",
+            "Hack-Design - An easy to follow design course"
+        ]
+    },
+    "ui-ux-design/Master a design tool": {
+        "roadmapDetails": "A design tool is your primary canvas. Figma has become the industry standard due to its collaborative nature and powerful features. Sketch and Adobe XD are also strong contenders. Pick one and master it. Learn how to create layouts, use components, and build interactive prototypes.",
+        "resources": [
+            "Figma Learn",
+            "Sketch Official Tutorials",
+            "Adobe XD User Guide",
+            "YouTube: Figma Crash Course"
+        ]
+    },
+    "ui-ux-design/Study user research methods": {
+        "roadmapDetails": "You are not your user. User research is about understanding the behaviors, needs, and motivations of your target audience. Learn methods like user interviews, surveys, and creating user personas. This research is foundational to UX design and ensures you are solving the right problems.",
+        "resources": [
+            "Nielsen Norman Group - User Research",
+            "Book: Just Enough Research by Erika Hall",
+            "SurveyMonkey for creating surveys",
+            "UX Tools - A list of tools for user research"
+        ]
+    },
+    "ui-ux-design/Learn prototyping and wireframing": {
+        "roadmapDetails": "This is where ideas start to take visual form. Wireframes are low-fidelity, basic layouts that focus on structure. Prototypes are high-fidelity, interactive mockups that look and feel like the final product. Learn to create both to test and iterate on your ideas quickly.",
+        "resources": [
+            "Balsamiq Wireframes",
+            "UXPin - The Guide to Wireframing",
+
+            "InVision - Prototyping Tool",
+            "Book: Sprint by Jake Knapp"
+        ]
+    },
+    "ui-ux-design/Build a portfolio": {
+        "roadmapDetails": "Your portfolio is the most important asset in your job search. Create detailed case studies for 10-15 projects. For each case study, describe the problem, your process, your design decisions, and the final outcome. A good portfolio tells a story and shows your thinking process.",
+        "resources": [
+            "Bestfolios - Gallery of design portfolios",
+            "Case Study Club",
+            "How to Build a UX Portfolio (article)",
+            "Use a platform like Behance, Dribbble, or your own website"
+        ]
+    },
+    "product-design/Master UX/UI design first": {
+        "roadmapDetails": "Product design is a senior role that builds on a strong foundation of UX and UI design. Before aiming for a product design role, ensure you have mastered the skills of a UX/UI designer, including user research, wireframing, prototyping, and visual design.",
+        "resources": [
+            "Complete the UI/UX Design roadmap first",
+            "Nielsen Norman Group articles and reports",
+            "Book: The Design of Everyday Things by Don Norman",
+            "Practice redesigning existing products"
+        ]
+    },
+    "product-design/Learn product management basics": {
+        "roadmapDetails": "Product designers work very closely with product managers. You need to understand their role and the basics of product management. Learn about creating product roadmaps, prioritizing features, and writing user stories.",
+        "resources": [
+            "Product School resources",
+            "SVPG (Silicon Valley Product Group) articles",
+            "Book: Inspired by Marty Cagan",
+            "Lenny's Newsletter"
+        ]
+    },
+    "product-design/Study business and metrics": {
+        "roadmapDetails": "Product designers need to understand the business context of their work. Learn about common business models and key performance indicators (KPIs). Understand how to use analytics tools like Google Analytics or Mixpanel to measure the impact of your design decisions.",
+        "resources": [
+            "Google Analytics for Beginners (free course)",
+            "Mixpanel University",
+            "Book: Lean Analytics by Alistair Croll & Benjamin Yoskovitz",
+            "Harvard Business Review articles on strategy"
+        ]
+    },
+    "product-design/Learn user research and testing": {
+        "roadmapDetails": "Deepen your expertise in user research and usability testing. As a product designer, you will be expected to lead research efforts and use the findings to drive the product strategy. Go beyond basic usability testing and learn about methods like contextual inquiry and diary studies.",
+        "resources": [
+            "Book: Universal Methods of Design",
+            "UserTesting.com platform",
+            "Lookback.io for moderated testing",
+            "Nielsen Norman Group's in-depth reports"
+        ]
+    },
+    "product-design/Build case studies": {
+        "roadmapDetails": "Your portfolio should showcase your ability to solve business problems through design. Create detailed case studies that outline your entire process, from initial research and problem definition to final design and impact measurement. A product design case study is more about the 'why' than just the 'what'.",
+        "resources": [
+            "Growth.Design for case study inspiration",
+            "How to write a killer product design case study (article)",
+            "Focus on the problem, process, and outcome",
+            "Quantify the impact of your work where possible"
+        ]
+    },
+    "blockchain-development/Learn blockchain fundamentals": {
+        "roadmapDetails": "Before writing any code, you need to understand the core concepts of blockchain. Learn about decentralization, consensus mechanisms (like Proof of Work and Proof of Stake), cryptography, and how a blockchain works. Understand what makes it different from a traditional database.",
+        "resources": [
+            "Bitcoin Whitepaper by Satoshi Nakamoto",
+            "Ethereum Whitepaper",
+            "Blockchain Basics by Anders Brownworth (YouTube)",
+            "Mastering Bitcoin (book)"
+        ]
+    },
+    "blockchain-development/Master JavaScript/TypeScript": {
+        "roadmapDetails": "Most decentralized applications (dApps) have a frontend that interacts with the blockchain. You will need to be proficient in JavaScript or TypeScript to build these user interfaces, and to use libraries like Web3.js or Ethers.js.",
+        "resources": [
+            "The Modern JavaScript Tutorial (javascript.info)",
+            "TypeScript Handbook",
+            "freeCodeCamp: JavaScript courses",
+            "React for frontend dApp development"
+        ]
+    },
+    "blockchain-development/Learn Solidity": {
+        "roadmapDetails": "Solidity is the most popular programming language for writing smart contracts on Ethereum and other EVM-compatible chains. It's a statically-typed language with a syntax similar to JavaScript. Learn its features, data types, and how to write, compile, and deploy smart contracts.",
+        "resources": [
+            "Solidity Official Documentation",
+            "CryptoZombies (interactive Solidity tutorial)",
+            "Learn Solidity in Y Minutes",
+            "Patrick Collins' Solidity course on YouTube"
+        ]
+    },
+    "blockchain-development/Study smart contract security": {
+        "roadmapDetails": "Smart contracts handle real value and are immutable once deployed, so security is paramount. Learn about common vulnerabilities like reentrancy attacks, integer overflows, and access control issues. Study best practices for writing secure smart contracts.",
+        "resources": [
+            "ConsenSys Smart Contract Best Practices",
+            "Secureum (security education)",
+            "Ethernaut (a wargame to learn hacking smart contracts)",
+            "Damn Vulnerable DeFi (another wargame)"
+        ]
+    },
+    "blockchain-development/Build dApps and smart contracts": {
+        "roadmapDetails": "The best way to learn is by building. Create 5-10 projects, starting with simple smart contracts and moving to full-stack decentralized applications. Examples include a simple voting system, a crowdfunding platform, or an NFT marketplace. Use a development environment like Hardhat or Foundry.",
+        "resources": [
+            "Build a Decentralized Application (dApp) - freeCodeCamp",
+            "Hardhat Tutorial",
+            "Foundry Book",
+            "Participate in Web3 hackathons"
+        ]
+    },
+    "ar-vr-development/Learn Unity and C#": {
+        "roadmapDetails": "Unity is the most popular game engine for AR and VR development. Start by learning the basics of the Unity editor and then master the C# programming language, which is used to script behavior in Unity. A strong foundation in both is essential.",
+        "resources": [
+            "Unity Learn",
+            "C# for Beginners (Microsoft)",
+            "Unity in Action (book)",
+            "Brackeys YouTube channel (though now archived, it's a treasure trove)"
+        ]
+    },
+    "ar-vr-development/Study 3D mathematics": {
+        "roadmapDetails": "AR and VR are all about 3D space. You need to have a solid understanding of 3D mathematics, including vectors, matrices, quaternions, and coordinate systems. This knowledge is crucial for manipulating objects in 3D space and understanding how the rendering pipeline works.",
+        "resources": [
+            "3Blue1Brown: Essence of linear algebra (YouTube)",
+            "Khan Academy: Linear Algebra",
+            "3D Math Primer for Graphics and Game Development (book)",
+            "Essential Mathematics for Games and Interactive Applications (book)"
+        ]
+    },
+    "ar-vr-development/Learn AR development": {
+        "roadmapDetails": "Focus on augmented reality. Learn to use frameworks like ARKit (for iOS) and ARCore (for Android) within Unity. Understand concepts like plane detection, image tracking, and world tracking to build applications that overlay digital content onto the real world.",
+        "resources": [
+            "AR Foundation in Unity",
+            "Google ARCore documentation",
+            "Apple ARKit documentation",
+            "Build an AR app tutorial (on YouTube or Unity Learn)"
+        ]
+    },
+    "ar-vr-development/Study VR development": {
+        "roadmapDetails": "Dive into virtual reality. Learn the principles of VR development, such as designing for comfort to avoid motion sickness, and creating intuitive interaction systems. Get familiar with the SDKs for major VR platforms like Oculus (Meta Quest) and SteamVR.",
+        "resources": [
+            "Oculus Developer Center",
+            "SteamVR Plugin for Unity",
+            "VR Design Best Practices (article)",
+            "Build a simple VR game in Unity (tutorial)"
+        ]
+    },
+    "ar-vr-development/Build AR/VR applications": {
+        "roadmapDetails": "Apply your knowledge by building a portfolio of 5-8 AR/VR projects. This could include a simple AR measuring app, a VR archery game, or an educational experience. This will demonstrate your skills and creativity to potential employers.",
+        "resources": [
+            "Project ideas for AR/VR",
+            "SideQuest for publishing indie VR content",
+            "Submit your apps to app stores",
+            "Participate in AR/VR hackathons"
+        ]
+    },
+    "iot-engineering/Learn electronics basics": {
+        "roadmapDetails": "IoT involves hardware, so you need to understand the basics of electronics. Learn about voltage, current, resistance (Ohm's Law), and common components like resistors, capacitors, and LEDs. Understand how to read a circuit diagram.",
+        "resources": [
+            "All About Circuits (website)",
+            "Khan Academy: Electrical Engineering",
+            "Book: Make: Electronics by Charles Platt",
+            "Get an electronics starter kit"
+        ]
+    },
+    "iot-engineering/Master Arduino/Raspberry Pi": {
+        "roadmapDetails": "Arduino and Raspberry Pi are the most popular microcontrollers/single-board computers for IoT projects. Learn how to program an Arduino (using C++) to read sensors and control actuators. Learn how to set up a Raspberry Pi (with Linux) for more complex tasks.",
+        "resources": [
+            "Arduino Official Website",
+            "Raspberry Pi Official Website",
+            "Adafruit Learning System",
+            "Projects on Instructables"
+        ]
+    },
+    "iot-engineering/Learn IoT communication protocols": {
+        "roadmapDetails": "IoT devices need to communicate with each other and the cloud. Learn about low-power wireless protocols like Wi-Fi, Bluetooth, Zigbee, and LoRa. Crucially, understand the lightweight messaging protocols designed for IoT, like MQTT and CoAP.",
+        "resources": [
+            "MQTT Essentials (HiveMQ)",
+            "Introduction to CoAP",
+            "Bluetooth SIG website",
+            "The LoRaWAN Specification"
+        ]
+    },
+    "iot-engineering/Study cloud IoT platforms": {
+        "roadmapDetails": "Learn how to connect your devices to the cloud to collect and analyze data. Get familiar with a major cloud IoT platform like AWS IoT Core, Azure IoT Hub, or Google Cloud IoT. Understand how to manage devices, process data streams, and trigger actions.",
+        "resources": [
+            "AWS IoT Core documentation",
+            "Azure IoT Hub documentation",
+            "Google Cloud IoT Core documentation",
+            "Blynk or Thingspeak for simpler projects"
+        ]
+    },
+    "iot-engineering/Build IoT projects": {
+        "roadmapDetails": "The best way to learn IoT is by building things. Create 5-10 projects that solve real-world problems. Examples include a home automation system, a weather station that sends data to the cloud, or a smart plant watering system. This will give you invaluable practical experience.",
+        "resources": [
+            "Hackster.io",
+            "Random Nerd Tutorials",
+            "Eletronics For You magazine",
+            "Join a local makerspace"
+        ]
+    },
+    "robotics-engineering/Learn Python and C++": {
+        "roadmapDetails": "Python and C++ are the two most important programming languages in robotics. Python is used for high-level logic and rapid prototyping, while C++ is used for performance-critical components. You need to be proficient in both.",
+        "resources": [
+            "Python for Everybody (Coursera)",
+            "learncpp.com",
+            "Book: Effective Modern C++ by Scott Meyers",
+            "LeetCode for practice"
+        ]
+    },
+    "robotics-engineering/Study robotics fundamentals": {
+        "roadmapDetails": "Understand the core concepts of robotics. This includes kinematics (the study of motion), dynamics (the study of forces causing motion), and control systems. A solid mathematical foundation in linear algebra and calculus is essential for this.",
+        "resources": [
+            "Modern Robotics: Mechanics, Planning, and Control (book and free online course)",
+            "QUT Robot Academy (YouTube)",
+            "Introduction to Robotics course on edX",
+            "MIT OpenCourseWare for robotics"
+        ]
+    },
+    "robotics-engineering/Learn ROS": {
+        "roadmapDetails": "The Robot Operating System (ROS) is the standard framework for robotics software development. It's a set of libraries and tools that help you build robot applications. Learn its core concepts like nodes, topics, services, and actions. ROS 2 is the current version to focus on.",
+        "resources": [
+            "ROS 2 Official Documentation",
+            "The Construct (online ROS learning platform)",
+            "Book: A Systematic Approach to Learning Robot Programming with ROS",
+            "TurtleBot simulator for hands-on practice"
+        ]
+    },
+    "robotics-engineering/Master computer vision basics": {
+        "roadmapDetails": "Many robots need to 'see' the world. Learn the basics of computer vision, including image processing, filtering, feature detection, and object recognition. Become proficient in using the OpenCV library, which is the standard for computer vision tasks.",
+        "resources": [
+            "OpenCV Python Tutorials",
+            "PyImageSearch blog",
+            "Computer Vision course on Coursera",
+            "Intel RealSense cameras for 3D vision"
+        ]
+    },
+    "robotics-engineering/Build robotics projects": {
+        "roadmapDetails": "Theory is not enough. Build physical robots to apply your skills. Start with a simple robot kit (like a line-following robot) and move to more complex projects like a robotic arm or a small autonomous vehicle. This is where you will learn the most.",
+        "resources": [
+            "Build your own robot arm",
+            "DIY Robocars community",
+            "LEGO Mindstorms",
+            "Participate in competitions like RoboCup or FIRST Robotics"
+        ]
+    },
+    "ai-natural-language-processing/Strong Python and ML foundation": {
+        "roadmapDetails": "Before specializing in NLP, you must have a strong foundation in Python programming and general machine learning concepts. Be comfortable with libraries like NumPy, Pandas, and Scikit-learn, and understand topics like regression, classification, and model evaluation.",
+        "resources": [
+            "Complete the Data Science or Machine Learning Engineer roadmap first",
+            "Book: Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow",
+            "Kaggle competitions",
+            "Python for Data Science Handbook"
+        ]
+    },
+    "ai-natural-language-processing/Learn NLP fundamentals": {
+        "roadmapDetails": "Start with the basics of Natural Language Processing. Learn about concepts like tokenization, stemming, lemmatization, part-of-speech tagging, and traditional NLP models like Bag-of-Words and TF-IDF. Use libraries like NLTK and spaCy for these tasks.",
+        "resources": [
+            "NLTK Book",
+            "spaCy 101 course",
+            "Jurafsky & Martin's Speech and Language Processing (book)",
+            "Stanford CS124: From Languages to Information"
+        ]
+    },
+    "ai-natural-language-processing/Study deep learning for NLP": {
+        "roadmapDetails": "Modern NLP is powered by deep learning. Learn about word embeddings (like Word2Vec), Recurrent Neural Networks (RNNs), LSTMs, and GRUs. Understand how these models can capture sequential information in text.",
+        "resources": [
+            "Stanford CS224n: NLP with Deep Learning (YouTube lectures)",
+            "Illustrated Word2vec (article)",
+            "Understanding LSTMs (article)",
+            "Deep Learning with PyTorch or TensorFlow"
+        ]
+    },
+    "ai-natural-language-processing/Master transformer models": {
+        "roadmapDetails": "The Transformer architecture revolutionized NLP. Deeply understand the concepts of self-attention and how Transformers work. Study seminal models like BERT and GPT. The Hugging Face Transformers library is an essential tool to master for working with these models.",
+        "resources": [
+            "The Illustrated Transformer (article)",
+            "Hugging Face Transformers course",
+            "Paper: Attention Is All You Need",
+            "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (paper)"
+        ]
+    },
+    "ai-natural-language-processing/Work with LLM APIs": {
+        "roadmapDetails": "Learn how to build applications on top of large language models (LLMs) using their APIs. Get familiar with the APIs from providers like OpenAI (for GPT models), Anthropic (for Claude), and Google (for Gemini). Understand concepts like prompt engineering to get the best results from these models.",
+        "resources": [
+            "OpenAI API documentation",
+            "Google AI for Developers",
+            "Anthropic documentation",
+            "LangChain or LlamaIndex for building LLM applications"
+        ]
+    },
+    "product-management/Understand product management fundamentals": {
+        "roadmapDetails": "Start by learning the core responsibilities of a product manager. Understand what a product roadmap is, how to define an MVP (Minimum Viable Product), and the difference between product, project, and program management. Learn about the product lifecycle.",
+        "resources": [
+            "Product School blog and resources",
+            "SVPG (Silicon Valley Product Group) articles by Marty Cagan",
+            "Book: Inspired: How to Create Tech Products Customers Love by Marty Cagan",
+            "Mind the Product community"
+        ]
+    },
+    "product-management/Learn user research and analytics": {
+        "roadmapDetails": "Product managers must be the voice of the user. Learn how to conduct user interviews, create user personas, and analyze user behavior using analytics tools like Google Analytics, Mixpanel, or Amplitude. Data-driven and user-centered decision-making is key.",
+        "resources": [
+            "Book: The Mom Test by Rob Fitzpatrick",
+            "Google Analytics for Beginners (free course)",
+            "Amplitude's Mastering Analytics course",
+            "Nielsen Norman Group for UX research articles"
+        ]
+    },
+    "product-management/Study Agile and Scrum": {
+        "roadmapDetails": "Most tech companies use Agile methodologies to build products. You must understand the principles of Agile and the specifics of the Scrum framework. Learn about the different roles (Product Owner, Scrum Master), events (Sprint Planning, Daily Stand-up), and artifacts (Product Backlog, Sprint Backlog).",
+        "resources": [
+            "The Scrum Guide",
+            "Agile Manifesto",
+            "Atlassian's guide to Agile",
+            "Get a Certified Scrum Product Owner (CSPO) certification"
+        ]
+    },
+    "product-management/Gain technical knowledge": {
+        "roadmapDetails": "While you don't need to be a coder, you need to understand the basics of how software is built to communicate effectively with engineers. Learn about APIs, databases, frontend vs. backend, and the basics of system design. This will earn you the respect of your engineering team.",
+        "resources": [
+            "How the Web Works (article)",
+            "Introduction to System Design (course)",
+            "Web Development 101",
+            "Talk to engineers and ask questions"
+        ]
+    },
+    "product-management/Work on case studies": {
+        "roadmapDetails": "Practice your product thinking skills by working on case studies. Pick a product you use, identify a problem or opportunity, and create a proposal for a new feature. Outline the user needs, business goals, success metrics, and a potential solution. This is great practice for PM interviews.",
+        "resources": [
+            "StellarPeers for PM interview prep",
+            "Exponent's PM interview courses",
+            "Lewis Lin's Decode and Conquer (book)",
+            "Watch product teardowns on YouTube"
+        ]
+    },
+    "it-project-management/Learn project management fundamentals": {
+        "roadmapDetails": "Understand the core principles of project management, including the five process groups: Initiating, Planning, Executing, Monitoring & Controlling, and Closing. Learn about key knowledge areas like scope, time, cost, quality, and risk management.",
+        "resources": [
+            "Project Management Institute (PMI)",
+            "A Guide to the Project Management Body of Knowledge (PMBOK Guide)",
+            "Google Project Management Certificate on Coursera",
+            "Introduction to Project Management (free course)"
+        ]
+    },
+    "it-project-management/Master Agile/Scrum": {
+        "roadmapDetails": "While traditional project management (Waterfall) is important, most IT projects now use Agile methodologies. Deeply understand the Agile Manifesto and the Scrum framework. Learn the roles, events, and artifacts of Scrum and how to apply them to manage a project.",
+        "resources": [
+            "The Scrum Guide",
+            "Atlassian's guide to Agile",
+            "Scrum.org resources",
+            "YouTube videos explaining Scrum in 10 minutes"
+        ]
+    },
+    "it-project-management/Get Scrum Master certification": {
+        "roadmapDetails": "The Certified ScrumMaster (CSM) from Scrum Alliance or the Professional Scrum Master (PSM I) from Scrum.org are valuable certifications. They demonstrate your understanding of the Scrum framework and are often a requirement for project management roles in Agile environments.",
+        "resources": [
+            "Scrum Alliance for CSM",
+            "Scrum.org for PSM",
+            "CSM vs PSM (comparison article)",
+            "Take a 2-day certification course"
+        ]
+    },
+    "it-project-management/Gain technical understanding": {
+        "roadmapDetails": "To manage IT projects effectively, you need a general understanding of the technology involved. You don't need to be an expert, but you should understand the software development life cycle, basic infrastructure concepts, and the technologies your team is using.",
+        "resources": [
+            "How software is made (article)",
+            "CompTIA A+ or Network+ for foundational knowledge",
+            "Talk to developers and engineers on your team",
+            "Read tech news and blogs"
+        ]
+    },
+    "it-project-management/Study PMP methodology": {
+        "roadmapDetails": "The Project Management Professional (PMP) certification from PMI is the global standard for project management. While it requires several years of experience to be eligible, studying the PMBOK Guide is valuable even for beginners. It provides a structured approach to managing large, complex projects.",
+        "resources": [
+            "PMP Certification Handbook",
+            "PMBOK Guide",
+            "PMP exam prep courses on Udemy (by Joseph Phillips or Andrew Ramdayal)",
+            "r/pmp subreddit"
+        ]
+    },
+    "scrum-master/Learn Agile principles": {
+        "roadmapDetails": "A Scrum Master must be a champion of Agile. Go beyond the mechanics of Scrum and deeply understand the 12 principles behind the Agile Manifesto. Focus on concepts like customer collaboration, responding to change, and delivering value frequently.",
+        "resources": [
+            "Agile Manifesto and 12 Principles",
+            "Agile in a Nutshell (YouTube)",
+            "Book: Agile Estimating and Planning by Mike Cohn",
+            "Mountain Goat Software blog by Mike Cohn"
+        ]
+    },
+    "scrum-master/Master Scrum framework": {
+        "roadmapDetails": "You must know the Scrum Guide inside and out. Understand the accountabilities (Product Owner, Scrum Master, Developers), the events (Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective), and the artifacts (Product Backlog, Sprint Backlog, Increment).",
+        "resources": [
+            "The Scrum Guide (official source)",
+            "Scrum.org learning paths",
+            "The Scrum Master Checklist by Michael James",
+            "Visualizing Scrum (InfoQ article)"
+        ]
+    },
+    "scrum-master/Get CSM certification": {
+        "roadmapDetails": "The Certified ScrumMaster (CSM) from Scrum Alliance or the Professional Scrum Master (PSM I) from Scrum.org are the standard entry-level certifications. They are often a prerequisite for getting your first Scrum Master job. The PSM is often considered more rigorous as it requires passing a tougher exam.",
+        "resources": [
+            "Scrum Alliance for CSM",
+            "Scrum.org for PSM",
+            "CSM vs PSM (comparison article)",
+            "Find a reputable trainer for the CSM course"
+        ]
+    },
+    "scrum-master/Practice facilitation skills": {
+        "roadmapDetails": "A huge part of a Scrum Master's job is facilitating meetings. Learn techniques for making meetings engaging and productive. Practice active listening, asking powerful questions, and managing group dynamics. These 'soft skills' are critical.",
+        "resources": [
+            "Book: Gamestorming: A Playbook for Innovators, Rulebreakers, and Changemakers",
+            "Liberating Structures (facilitation techniques)",
+            "TastyCupcakes.org (for Agile games)",
+            "Voltage Control blog on facilitation"
+        ]
+    },
+    "scrum-master/Get advanced certifications": {
+        "roadmapDetails": "Once you have experience, consider advanced certifications to continue your growth. The Advanced Certified ScrumMaster (A-CSM) and Certified Scrum Professional (CSP) from Scrum Alliance, or the PSM II and PSM III from Scrum.org, demonstrate a deeper level of mastery and experience.",
+        "resources": [
+            "Scrum Alliance A-CSM and CSP paths",
+            "Scrum.org PSM II and PSM III paths",
+            "Large-Scale Scrum (LeSS) or Scaled Agile Framework (SAFe) for enterprise-level coaching",
+            "ICAgile certifications for coaching and facilitation"
+        ]
+    },
+    "enterprise-architecture/Gain 5-10 years of IT experience": {
+        "roadmapDetails": "Enterprise Architecture is not an entry-level role. It requires a broad and deep understanding of technology and business that can only be gained through significant experience. Work in roles like software development, solutions architecture, or cloud engineering first.",
+        "resources": [
+            "Follow a developer or cloud engineer roadmap first",
+            "Work in different industries to get broad experience",
+            "Take on progressively larger and more complex projects",
+            "Develop strong communication and leadership skills"
+        ]
+    },
+    "enterprise-architecture/Learn TOGAF framework": {
+        "roadmapDetails": "The Open Group Architecture Framework (TOGAF) is the most widely used framework for enterprise architecture. Study its components, especially the Architecture Development Method (ADM), to understand how to develop and manage an enterprise architecture.",
+        "resources": [
+            "TOGAF Standard, Version 9.2",
+            "The Open Group resources",
+            "TOGAF 9 in 5 Minutes (YouTube)",
+            "TOGAF certification courses on Udemy"
+        ]
+    },
+    "enterprise-architecture/Master multiple technology domains": {
+        "roadmapDetails": "An enterprise architect needs to be a 'jack of all trades, master of some'. You need to have deep knowledge in at least one area (like application architecture or cloud), and a broad understanding of many others, including data, security, and infrastructure.",
+        "resources": [
+            "Read technology news and analyst reports (Gartner, Forrester)",
+            "Attend industry conferences",
+            "Follow chief architects and CTOs on social media",
+            "Continuously learn about new technologies"
+        ]
+    },
+    "enterprise-architecture/Study business strategy": {
+        "roadmapDetails": "Enterprise architecture is about aligning IT with business strategy. You need to understand how businesses work. Study concepts like business capability modeling, value streams, and strategic planning. An MBA or business-focused courses can be very helpful.",
+        "resources": [
+            "Harvard Business Review",
+            "Book: Good Strategy Bad Strategy by Richard Rumelt",
+            "Coursera courses on business strategy",
+            "Learn to read financial statements"
+        ]
+    },
+    "enterprise-architecture/Get TOGAF certification": {
+        "roadmapDetails": "The TOGAF 9 certification is a well-recognized credential for enterprise architects. It demonstrates your knowledge of the TOGAF framework. There are two levels: Foundation and Certified. Achieving the Certified level is the goal for aspiring EAs.",
+        "resources": [
+            "TOGAF 9 Certification Program",
+            "Official TOGAF study guides",
+            "Practice exams",
+            "Find a TOGAF accredited training course"
+        ]
+    },
+    "technical-writing/Improve technical writing skills": {
+        "roadmapDetails": "The core of the job is writing. Practice writing with clarity, conciseness, and accuracy. Learn to structure your content logically and write for a specific audience. Focus on active voice and simple language.",
+        "resources": [
+            "Google's Technical Writing Courses",
+            "Book: On Writing Well by William Zinsser",
+            "The "I'd Rather Be Writing" blog by Tom Johnson",
+            "Write the Docs community"
+        ]
+    },
+    "technical-writing/Learn basic programming concepts": {
+        "roadmapDetails": "To document technology, you need to understand it. Learn the basics of a programming language like Python or JavaScript. Understand concepts like variables, loops, functions, and APIs. You don't need to be an expert coder, but you need to be able to read and understand code.",
+        "resources": [
+            "Python for Everybody (Coursera)",
+            "freeCodeCamp",
+            "Learn to read code on GitHub",
+            "Pair with developers to understand their work"
+        ]
+    },
+    "technical-writing/Master documentation tools": {
+        "roadmapDetails": "Learn the tools of the trade. Master Markdown, a lightweight markup language used everywhere. Get familiar with documentation-as-code workflows. Learn to use authoring tools like Confluence, MadCap Flare, or static site generators like Hugo or Jekyll.",
+        "resources": [
+            "Markdown Guide",
+            "Introduction to Docs as Code",
+            "Hugo documentation",
+            "Confluence tutorials"
+        ]
+    },
+    "technical-writing/Study API documentation": {
+        "roadmapDetails": "API documentation is a huge and growing field for technical writers. Learn how to document REST APIs. Understand how to use the OpenAPI Specification (Swagger) to generate interactive API documentation. Learn to use tools like Postman to test and understand APIs.",
+        "resources": [
+            "OpenAPI Specification",
+            "Swagger documentation",
+            "Postman Learning Center",
+            "Stripe's API documentation (a great example)"
+        ]
+    },
+    "technical-writing/Build a writing portfolio": {
+        "roadmapDetails": "Your portfolio is how you get hired. Create a collection of your best writing samples. This can include tutorials, how-to guides, API documentation, or even contributions to open source documentation. A portfolio website is a great way to showcase your work.",
+        "resources": [
+            "Contribute to an open source project on GitHub",
+            "Start a technical blog",
+            "Create documentation for one of your own coding projects",
+            "Create a portfolio on a site like Clippings.me or your own website"
+        ]
+    },
+    "digital-marketing/Learn SEO fundamentals": {
+        "roadmapDetails": "Search Engine Optimization (SEO) is about getting your website to rank higher in search engines like Google. Learn about the three pillars of SEO: technical SEO, on-page SEO (content and keywords), and off-page SEO (backlinks).",
+        "resources": [
+            "Moz's Beginner's Guide to SEO",
+            "Google's SEO Starter Guide",
+            "Ahrefs' blog",
+            "Backlinko blog by Brian Dean"
+        ]
+    },
+    "digital-marketing/Master Google Analytics": {
+        "roadmapDetails": "You can't improve what you can't measure. Google Analytics is the standard tool for tracking and analyzing website traffic. Learn how to set it up, track key metrics, create reports, and derive insights about user behavior.",
+        "resources": [
+            "Google Analytics for Beginners (free course)",
+            "Google Tag Manager Fundamentals",
+            "Analytics Mania blog",
+            "MeasureSchool YouTube channel"
+        ]
+    },
+    "digital-marketing/Learn SEM and Google Ads": {
+        "roadmapDetails": "Search Engine Marketing (SEM) is about using paid advertising to appear in search results. Master Google Ads, the largest platform for SEM. Learn about keyword research, ad copywriting, bidding strategies, and conversion tracking.",
+        "resources": [
+            "Google Ads Certifications (free on Skillshop)",
+            "PPC Hero blog",
+            "WordStream's PPC University",
+            "The Ultimate Guide to Google Ads (HubSpot)"
+        ]
+    },
+    "digital-marketing/Study content marketing": {
+        "roadmapDetails": "Content marketing is about creating and distributing valuable content to attract and retain an audience. Learn how to create a content strategy, write blog posts, create videos, and promote your content to drive traffic and leads.",
+        "resources": [
+            "Content Marketing Institute",
+            "HubSpot Academy's Content Marketing course",
+            "Copyblogger blog",
+            "Book: They Ask, You Answer by Marcus Sheridan"
+        ]
+    },
+    "digital-marketing/Learn social media marketing": {
+        "roadmapDetails": "Learn how to use social media platforms like LinkedIn, Twitter, Instagram, and Facebook to build a brand and engage with customers. Understand the differences between platforms and how to create platform-specific content and advertising campaigns.",
+        "resources": [
+            "Hootsuite Academy",
+            "Social Media Examiner blog",
+            "Facebook Blueprint (free courses)",
+            "Sprout Social blog"
+        ]
+    },
+    "computer-vision-engineer/Strong Python and ML foundation": {
+        "roadmapDetails": "Computer vision is a subfield of machine learning. You must have a strong foundation in Python and general ML concepts (regression, classification, etc.) before specializing. Be proficient with NumPy, Pandas, and Scikit-learn.",
+        "resources": [
+            "Complete the Data Science or Machine Learning Engineer roadmap first",
+            "Python for Data Science Handbook",
+            "Book: Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow",
+            "Coursera: Machine Learning by Andrew Ng"
+        ]
+    },
+    "computer-vision-engineer/Learn image processing basics": {
+        "roadmapDetails": "Before applying ML, learn the fundamentals of classical image processing. Understand concepts like pixels, color spaces (RGB, HSV), filtering, edge detection, and morphological operations. These are the building blocks for more advanced techniques.",
+        "resources": [
+            "Digital Image Processing (book by Gonzalez and Woods)",
+            "OpenCV tutorials on image processing",
+            "scikit-image library documentation",
+            "Image Processing with Python (tutorial)"
+        ]
+    },
+    "computer-vision-engineer/Master OpenCV": {
+        "roadmapDetails": "OpenCV (Open Source Computer Vision Library) is the most important tool for a computer vision engineer. Become proficient in using it for a wide range of tasks, from reading and displaying images to performing complex operations like feature detection and object tracking.",
+        "resources": [
+            "OpenCV Python Tutorials (official docs)",
+            "PyImageSearch blog by Adrian Rosebrock",
+            "Mastering OpenCV 4 with Python (book)",
+            "Learn OpenCV blog"
+        ]
+    },
+    "computer-vision-engineer/Study deep learning for CV": {
+        "roadmapDetails": "Modern computer vision is dominated by deep learning. Study Convolutional Neural Networks (CNNs) in depth. Understand their architecture (convolutional layers, pooling layers) and how they learn features from images. Use TensorFlow or PyTorch to build and train CNNs.",
+        "resources": [
+            "Stanford CS231n: Convolutional Neural Networks for Visual Recognition",
+            "fast.ai course",
+            "Deep Learning with Python by François Chollet (book)",
+            "A guide to convolution arithmetic for deep learning (article)"
+        ]
+    },
+    "computer-vision-engineer/Learn modern architectures": {
+        "roadmapDetails": "Go beyond basic CNNs and learn about modern, state-of-the-art architectures for tasks like object detection (e.g., YOLO, SSD, Faster R-CNN) and image segmentation (e.g., U-Net, Mask R-CNN). Understand the trade-offs between speed and accuracy for these models.",
+        "resources": [
+            "Papers With Code (to find state-of-the-art models)",
+            "YOLO (You Only Look Once) official website",
+            "Detectron2 (Facebook's object detection library)",
+            "The R-CNN family of papers"
+        ]
+    },
+    "solutions-architect/Gain 3-5 years development experience": {
+        "roadmapDetails": "A solutions architect role is not for beginners. It requires significant hands-on experience in software development. You need to have built and deployed real applications to understand the trade-offs and challenges involved in creating software.",
+        "resources": [
+            "Follow the Frontend, Backend, or Full-Stack roadmap",
+            "Work as a software engineer for several years",
+            "Take on leadership responsibilities within your team",
+            "Get involved in system design discussions"
+        ]
+    },
+    "solutions-architect/Learn system design principles": {
+        "roadmapDetails": "System design is the core skill of a solutions architect. Learn how to design scalable, reliable, and maintainable systems. Study concepts like microservices, message queues, caching, load balancing, and database scaling. Practice with common system design interview questions.",
+        "resources": [
+            "Grokking the System Design Interview (course)",
+            "System Design Primer on GitHub",
+            "Book: Designing Data-Intensive Applications by Martin Kleppmann",
+            "High Scalability (blog)"
+        ]
+    },
+    "solutions-architect/Master cloud architecture": {
+        "roadmapDetails": "Modern solutions are built on the cloud. You must become an expert in designing and architecting solutions on a major cloud platform like AWS, Azure, or GCP. Understand their core services deeply and know how to combine them to meet business requirements.",
+        "resources": [
+            "AWS Well-Architected Framework",
+            "Azure Architecture Center",
+            "Google Cloud Architecture Framework",
+            "Read reference architectures provided by cloud vendors"
+        ]
+    },
+    "solutions-architect/Study design patterns": {
+        "roadmapDetails": "Learn about common software design patterns (e.g., Singleton, Factory, Observer) and architectural patterns (e.g., Microservices, Event-Driven, MVC). These patterns are reusable solutions to common problems and provide a shared language for discussing design.",
+        "resources": [
+            "Book: Design Patterns: Elements of Reusable Object-Oriented Software (Gang of Four)",
+            "Refactoring.Guru",
+            "Microservices.io",
+            "Martin Fowler's blog"
+        ]
+    },
+    "solutions-architect/Get cloud architect certification": {
+        "roadmapDetails": "Certifications are highly valuable for solutions architects. The AWS Certified Solutions Architect - Professional or the Microsoft Certified: Azure Solutions Architect Expert are top-tier certifications that demonstrate a high level of expertise in cloud architecture.",
+        "resources": [
+            "AWS Certified Solutions Architect - Professional exam guide",
+            "Azure Solutions Architect Expert learning paths",
+            "Adrian Cantrill's certification courses",
+            "Whizlabs practice exams"
+        ]
+    },
+    "business-analyst/Learn business analysis fundamentals": {
+        "roadmapDetails": "Start with the basics of business analysis. Understand the role of a BA and the business analysis lifecycle. Learn about requirements gathering, analysis, and documentation. Get familiar with the BABOK (Business Analysis Body of Knowledge).",
+        "resources": [
+            "International Institute of Business Analysis (IIBA)",
+            "BABOK Guide",
+            "Bridging the Gap (blog and courses)",
+            "Modern Analyst (community)"
+        ]
+    },
+    "business-analyst/Master SQL and Excel": {
+        "roadmapDetails": "Business analysts need strong data analysis skills. You must be proficient in Excel for data manipulation and visualization. You also need to master SQL to query databases and extract the data you need for your analysis.",
+        "resources": [
+            "ExcelIsFun YouTube channel",
+            "Maven Analytics courses on Excel and SQL",
+            "SQLBolt - Interactive SQL Tutorial",
+            "Analyze data with SQL (Codecademy)"
+        ]
+    },
+    "business-analyst/Study requirements elicitation": {
+        "roadmapDetails": "A core task for a BA is gathering requirements from stakeholders. Learn various techniques for this, such as interviews, workshops, surveys, and document analysis. Practice how to ask effective questions and listen actively.",
+        "resources": [
+            "IIBA resources on elicitation",
+            "Book: Business Analysis for Practitioners: A Practice Guide by PMI",
+            "Techniques for Requirements Elicitation (article)",
+            "Practice with mock stakeholder interviews"
+        ]
+    },
+    "business-analyst/Learn process modeling": {
+        "roadmapDetails": "Business analysts often need to document and improve business processes. Learn how to create process flowcharts and diagrams. Become familiar with a standard notation like BPMN (Business Process Model and Notation).",
+        "resources": [
+            "BPMN 2.0 Tutorial",
+            "Lucidchart or Draw.io for creating diagrams",
+            "A Guide to Process Mapping (article)",
+            "Practice by modeling a process you know well"
+        ]
+    },
+    "business-analyst/Get BA certifications": {
+        "roadmapDetails": "Certifications can help validate your skills. The IIBA offers several certifications, with the Certified Business Analysis Professional (CBAP) being the most recognized. PMI also offers the Professional in Business Analysis (PMI-PBA) certification.",
+        "resources": [
+            "IIBA Certification Handbook",
+            "PMI-PBA Certification Handbook",
+            "Watermark Learning for certification prep",
+            "The BA Guide for certification resources"
+        ]
+    }
 }
