@@ -540,6 +540,97 @@
             "Book: Kubernetes in Action by Marko Lukša"
         ]
     },
+    "deployment/Understand Deployment Basics": {
+        "roadmapDetails": "Learn what deployment means: moving an application from a development environment to production. Understand the different environments like Development, Staging, and Production. Get to know the basics of domain names, hosting, and how DNS works to point a domain to an IP address.",
+        "resources": [
+            "What is a deployment environment? (article)",
+            "How DNS Works (comic)",
+            "MDN Web Docs: Domain Names",
+            "DigitalOcean: Introduction to Web Hosting"
+        ]
+    },
+    "deployment/Version Control": {
+        "roadmapDetails": "Git and GitHub are essential for managing your source code. Learn the basic commands to track changes, push your code to a remote repository like GitHub, and collaborate with others. Understanding branching strategies and how to create and merge pull requests is a key skill.",
+        "resources": [
+            "freeCodeCamp Git tutorials",
+            "GitHub Learning Lab",
+            "Udemy Git Complete Course",
+            "Learn Git Branching (interactive)"
+        ]
+    },
+    "deployment/Web Hosting Fundamentals": {
+        "roadmapDetails": "Understand the different ways to host a website, from simple shared hosting to powerful cloud servers. For frontend projects, platforms like Netlify and Vercel offer an incredibly easy and often free way to deploy. Start by deploying a simple static site to GitHub Pages.",
+        "resources": [
+            "Official docs for Netlify and Vercel",
+            "GitHub Pages documentation",
+            "Firebase Hosting docs",
+            "YouTube: Deploying a React App to Netlify"
+        ]
+    },
+    "deployment/Backend Deployment Basics": {
+        "roadmapDetails": "Deploying a backend is more complex than a frontend. Learn about web servers like Nginx or Apache that handle incoming requests. For applications written in Node.js or Python, you'll need an application server like PM2 or Gunicorn to keep your app running. Platforms like Heroku and Railway make this process much simpler for beginners.",
+        "resources": [
+            "freeCodeCamp Backend Deployment guides",
+            "DigitalOcean tutorials on deploying Node.js apps",
+            "Official docs for Heroku and Railway",
+            "Udemy Node.js Deployment courses"
+        ]
+    },
+    "deployment/Databases and Environment Variables": {
+        "roadmapDetails": "Your deployed application needs to connect to a database. Learn how to use managed database services like AWS RDS or MongoDB Atlas so you don't have to manage the database server yourself. Crucially, learn to use environment variables to store sensitive information like database passwords, instead of hardcoding them in your application.",
+        "resources": [
+            "MongoDB University free courses",
+            "AWS RDS free tier tutorials",
+            "The 12-Factor App: Config",
+            "Pluralsight AWS RDS courses"
+        ]
+    },
+    "deployment/Domain Names and SSL": {
+        "roadmapDetails": "Give your project a professional touch with a custom domain name from registrars like GoDaddy or Namecheap. Learn how to configure your domain's DNS settings to point to your hosting provider. Secure your site with an SSL certificate to enable HTTPS. Let's Encrypt provides free SSL certificates, and many modern hosting platforms automate this for you.",
+        "resources": [
+            "Let's Encrypt official docs",
+            "Namecheap and GoDaddy tutorials",
+            "Cloudflare for DNS and SSL management",
+            "LinkedIn Learning Domain and SSL courses"
+        ]
+    },
+    "deployment/Continuous Integration & Deployment (CI/CD)": {
+        "roadmapDetails": "CI/CD is the heart of modern DevOps. Learn how to create automated pipelines that build, test, and deploy your application whenever you push new code. GitHub Actions is a great place to start as it's integrated directly into GitHub. Explore other tools like GitLab CI/CD or Jenkins as you advance.",
+        "resources": [
+            "GitHub Actions documentation",
+            "YouTube CI/CD pipeline tutorials",
+            "The CI/CD Book",
+            "Coursera DevOps Specializations"
+        ]
+    },
+    "deployment/Containerization and Orchestration": {
+        "roadmapDetails": "Docker allows you to package your application and all its dependencies into a single 'container', ensuring it runs the same way everywhere. This is a fundamental skill for modern deployment. For advanced use cases with many containers, Kubernetes is the industry standard for managing (orchestrating) them, but focus on mastering Docker first.",
+        "resources": [
+            "Docker official tutorials",
+            "A Cloud Guru Docker and Kubernetes courses",
+            "Play with Docker (hands-on environment)",
+            "Book: Docker Deep Dive by Nigel Poulton"
+        ]
+    },
+    "deployment/Cloud Provider Deployment": {
+        "roadmapDetails": "Go beyond simple platforms and learn to deploy on one of the major cloud providers: AWS, Azure, or GCP. Learn to use their core services like virtual machines (EC2), serverless functions (Lambda), and container services (ECS, EKS). For advanced users, Infrastructure as Code (IaC) tools like Terraform allow you to manage your entire cloud setup with code.",
+        "resources": [
+            "AWS Free Tier tutorials",
+            "Azure and GCP free tier tutorials",
+
+            "Cloud Academy, A Cloud Guru",
+            "Terraform documentation"
+        ]
+    },
+    "deployment/Monitoring and Logging": {
+        "roadmapDetails": "Once your application is deployed, you need to know if it's running correctly. Learn to use monitoring tools like Prometheus and Grafana to track performance metrics and set up alerts. Explore logging tools like the ELK Stack (Elasticsearch, Logstash, Kibana) or cloud-native solutions like AWS CloudWatch to collect and analyze application logs to debug issues.",
+        "resources": [
+            "Prometheus and Grafana official docs",
+            "DigitalOcean tutorials on setting up monitoring",
+            "AWS CloudWatch documentation",
+            "Udemy Monitoring courses"
+        ]
+    },
     "network-engineering/Learn networking fundamentals": {
         "roadmapDetails": "Start with the basics of how computer networks work. Study the OSI and TCP/IP models, understand IP addressing (IPv4 and IPv6), subnetting, and common protocols like DNS, DHCP, and HTTP. This is the foundation for everything else in networking.",
         "resources": [
@@ -1080,7 +1171,7 @@
             "Participate in competitions like RoboCup or FIRST Robotics"
         ]
     },
-    "ai-natural-language-processing/Learn Python and ML foundation": {
+    "ai-natural-language-processing/Strong Python and ML foundation": {
         "roadmapDetails": "Before specializing in NLP, you must have a strong foundation in Python programming and general machine learning concepts. Be comfortable with libraries like NumPy, Pandas, and Scikit-learn, and understand topics like regression, classification, and model evaluation.",
         "resources": [
             "Complete the Data Science or Machine Learning Engineer roadmap first",
@@ -1310,7 +1401,7 @@
         "resources": [
             "Google's Technical Writing Courses",
             "Book: On Writing Well by William Zinsser",
-            "The \"I'd Rather Be Writing\" blog by Tom Johnson",
+            "The 'I'd Rather Be Writing' blog by Tom Johnson",
             "Write the Docs community"
         ]
     },
@@ -1395,7 +1486,7 @@
             "Sprout Social blog"
         ]
     },
-    "computer-vision-engineer/Learn Python and ML foundation": {
+    "computer-vision-engineer/Strong Python and ML foundation": {
         "roadmapDetails": "Computer vision is a subfield of machine learning. You must have a strong foundation in Python and general ML concepts (regression, classification, etc.) before specializing. Be proficient with NumPy, Pandas, and Scikit-learn.",
         "resources": [
             "Complete the Data Science or Machine Learning Engineer roadmap first",
@@ -1531,5 +1622,3 @@
         ]
     }
 }
-
-    
