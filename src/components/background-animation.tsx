@@ -61,7 +61,7 @@ const BackgroundAnimation = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-10 pointer-events-none" />;
+  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-2 pointer-events-none" />;
 };
 
 export default BackgroundAnimation;
